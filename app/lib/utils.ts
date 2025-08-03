@@ -1,0 +1,28 @@
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export function formatDate(input: string | number): string {
+  const date = new Date(input)
+  return date.toLocaleDateString("hu-HU", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+}
+
+export const slugify = (text: string) => {
+  return text
+    .toString() // Cast to string (optional)
+    .normalize("NFKD") // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
+    .toLowerCase() // Convert the string to lowercase letters
+    .trim() // Remove whitespace from both sides of a string (optional)
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+    .replace(/\_/g, "-") // Replace _ with -
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/\-$/g, "") // Remove trailing -
+}

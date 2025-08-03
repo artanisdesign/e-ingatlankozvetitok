@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98.0392%;
+    --foreground: 240 10% 3.9216%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9216%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9216%;
+    --primary: 173.4146 80.3922% 40%;
+    --primary-foreground: 0 0% 98.0392%;
+    --secondary: 24.5815 94.9791% 53.1373%;
+    --secondary-foreground: 0 0% 98.0392%;
+    --muted: 240 4.7619% 95.8824%;
+    --muted-foreground: 240 3.8298% 46.0784%;
+    --accent: 240 4.7619% 95.8824%;
+    --accent-foreground: 240 10% 3.9216%;
+    --destructive: 0 84.2365% 60.1961%;
+    --destructive-foreground: 0 0% 98.0392%;
+    --border: 240 5.8824% 90%;
+    --input: 240 5.8824% 90%;
+    --ring: 173.4146 80.3922% 40%;
+    --chart-1: 173.4146 80.3922% 40%;
+    --chart-2: 172.4551 66.0079% 50.3922%;
+    --chart-3: 170.5714 76.9231% 64.3137%;
+    --chart-4: 168.3871 83.7838% 78.2353%;
+    --chart-5: 167.234 85.4545% 89.2157%;
+    --sidebar: 240 4.7619% 95.8824%;
+    --sidebar-foreground: 240 10% 3.9216%;
+    --sidebar-primary: 173.4146 80.3922% 40%;
+    --sidebar-primary-foreground: 0 0% 98.0392%;
+    --sidebar-accent: 0 0% 100%;
+    --sidebar-accent-foreground: 240 10% 3.9216%;
+    --sidebar-border: 240 5.8824% 90%;
+    --sidebar-ring: 173.4146 80.3922% 40%;
+    --font-sans: Inter;
+    --font-serif: serif;
+    --font-mono: monospace;
+    --radius: 0.5rem;
+    --tracking-normal: 0rem;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9216%;
+    --foreground: 0 0% 98.0392%;
+    --card: 240 5.8824% 10%;
+    --card-foreground: 0 0% 98.0392%;
+    --popover: 240 10% 3.9216%;
+    --popover-foreground: 0 0% 98.0392%;
+    --primary: 173.4146 80.3922% 40%;
+    --primary-foreground: 240 10% 3.9216%;
+    --secondary: 24.5815 94.9791% 53.1373%;
+    --secondary-foreground: 0 0% 98.0392%;
+    --muted: 240 5.8824% 10%;
+    --muted-foreground: 240 5.0279% 64.902%;
+    --accent: 240 5.8824% 10%;
+    --accent-foreground: 0 0% 98.0392%;
+    --destructive: 0 62.8205% 30.5882%;
+    --destructive-foreground: 0 0% 98.0392%;
+    --border: 240 3.7037% 15.8824%;
+    --input: 240 3.7037% 15.8824%;
+    --ring: 173.4146 80.3922% 40%;
+    --chart-1: 173.4146 80.3922% 40%;
+    --chart-2: 172.4551 66.0079% 50.3922%;
+    --chart-3: 170.5714 76.9231% 64.3137%;
+    --chart-4: 168.3871 83.7838% 78.2353%;
+    --chart-5: 167.234 85.4545% 89.2157%;
+    --sidebar: 240 10% 3.9216%;
+    --sidebar-foreground: 0 0% 98.0392%;
+    --sidebar-primary: 173.4146 80.3922% 40%;
+    --sidebar-primary-foreground: 240 10% 3.9216%;
+    --sidebar-accent: 240 5.8824% 10%;
+    --sidebar-accent-foreground: 0 0% 98.0392%;
+    --sidebar-border: 240 3.7037% 15.8824%;
+    --sidebar-ring: 173.4146 80.3922% 40%;
+    --font-sans: Inter;
+    --font-serif: serif;
+    --font-mono: monospace;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+h2,
+h3 {
+  scroll-margin-top: 16px;
+}
+/* Safari-only */
+@supports (-webkit-hyphens: none) {
+  h2,
+  h3 {
+    padding-top: 16px;
+    margin-top: -16px;
+  }
+}
+
+.table {
+  width: calc(100% - 32px) !important;
+  margin: auto;
+}
+
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    overflow-wrap: anywhere !important;
+    hyphens: auto !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    overflow-wrap: anywhere !important;
+  }
+
+  .resp-table {
+    border: 0;
+  }
+  .resp-table,
+  .resp-table td {
+    width: 100% !important;
+    padding-left: 0px !important;
+  }
+
+  .resp-table col {
+    width: 100% !important;
+    display: table-column;
+  }
+
+  .resp-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .resp-table tr {
+    border-bottom: 2px dashed #e5e3e3 !important;
+    display: block;
+  }
+  .dark .resp-table tr {
+    border-bottom: 2px dashed rgb(31, 41, 55) !important;
+    display: block;
+  }
+
+  .resp-table td {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .resp-table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    padding: 2px 2px 2px 2px;
+  }
+
+  .resp-table td:last-child {
+    border-bottom: 0;
+  }
+}
+/*
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}*/
