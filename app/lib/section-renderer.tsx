@@ -58,7 +58,6 @@ function renderSection(section: Block, index: number) {
         <div key={index}>
           {/* @ts-expect-error Async Server Component */}
           <BlogArticles />
-          <MapSection />
           <MainFeatures data={section as FeaturesBlock} />
         </div>
       )

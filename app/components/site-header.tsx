@@ -14,7 +14,7 @@ import { Button } from "./ui/button"
 export default function SiteHeader({ data }: { data: HeaderData }) {
   return (
     <header className="z-100 flex w-full flex-wrap text-sm content-visibility-visible min-[900px]:flex-nowrap min-[900px]:justify-start">
-      <div className="absolute left-0 top-0 h-14 w-full shadow-sm bg-background dark:bg-background/30 min-[900px]:shadow-none"></div>
+      <div className="absolute left-0 top-0 h-14 w-full bg-background shadow-sm dark:bg-background/30 min-[900px]:shadow-none"></div>
 
       <div className="h-30 relative mx-auto flex h-14 w-full max-w-[85rem] items-center justify-between  px-3 min-[900px]:h-14 lg:px-6">
         <Link
