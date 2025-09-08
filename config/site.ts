@@ -4,7 +4,7 @@ const isProd = process.env.ON_VERCEL !== "true"
 
 const URL = isProd
   ? "https://e-ingatlankozvetitok.hu"
-  : "https://cc-blog-sooty.vercel.app"
+  : "https://e-ingatlanugyvedek.vercel.app"
 
 const NAME = "e-ingatlanközvetítők.hu"
 
@@ -13,8 +13,7 @@ const DESCRIPTION =
 
 export const siteConfig = {
   title: NAME,
-  siteTitle:
-    "e-ingatlanközvítők.hu - az ingatlan ügyvédi társulás",
+  siteTitle: "e-ingatlanközvítők.hu",
   name: NAME,
   url: URL,
   description: DESCRIPTION,
@@ -37,10 +36,10 @@ export const siteConfig = {
       title: "Disclaimerek",
       id: "DisclaimerLinks",
     },
-    {
+    /*{
       title: "Városok",
       id: "CityLinks",
-    },
+    },*/
   ],
   links: {},
   defaultSeo: {
@@ -53,15 +52,9 @@ export const siteConfig = {
       siteName: NAME,
       images: [
         {
-          url: "/og-image.jpg",
-          width: 800,
-          height: 505,
-          alt: NAME,
-        },
-        {
-          url: "/og-image-high.jpg",
-          width: 1800,
-          height: 1136,
+          url: "/og-image-n.jpg",
+          width: 1200,
+          height: 630,
           alt: NAME,
         },
       ],
