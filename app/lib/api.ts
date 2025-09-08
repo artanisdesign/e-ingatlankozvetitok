@@ -33,7 +33,7 @@ export async function getPageSlugs(): Promise<BlogPagePropsStatic["params"][]> {
     }
   )
 
-  const pages = await getData("static-pages", query)
+  const pages = await getData("kozvetito-pages", query)
 
   return pages.data.map((page: any) => ({
     slug: page.slug,
@@ -115,7 +115,7 @@ export async function getPageBySlug(
     }
   )
   //console.log(query)
-  const pages = await getData("static-pages", query)
+  const pages = await getData("kozvetito-pages", query)
 
   //console.log("ddddd", pages.data[0])
 
@@ -142,7 +142,7 @@ export async function getPostSlugs(): Promise<BlogPagePropsStatic["params"][]> {
     }
   )
 
-  const slugs = await getData("articles", query)
+  const slugs = await getData("kozvetito-articles", query)
 
   return slugs.data.map((post: any) => ({
     slug: post.slug,
@@ -178,7 +178,7 @@ export async function getAllAuthors(
     }
   )
 
-  const authors = await getData("authors", query)
+  const authors = await getData("kozvetito-authors", query)
 
   return authors.data.map((author: Author) => author)
 }
@@ -265,7 +265,7 @@ export async function getAllPosts(
     }
   )
 
-  const posts = await getData("articles", query)
+  const posts = await getData("kozvetito-articles", query)
 
   return posts.data.map((post: any) => ({
     ...post,
@@ -303,7 +303,7 @@ export async function getFeaturedPost(limit: number = 1): Promise<BlogPost[]> {
     }
   )
 
-  const posts = await getData("articles", query)
+  const posts = await getData("kozvetito-articles", query)
 
   return posts.data.map((post: any) => ({
     ...post,
@@ -348,7 +348,7 @@ export async function getAllEnglishPosts(
     }
   )
 
-  const posts = await getData("articles", query)
+  const posts = await getData("kozvetito-articles", query)
 
   return posts.data.map((post: any) => ({
     ...post,
@@ -390,7 +390,7 @@ export async function getGlobals(
     }
   )
 
-  const globals = await getData("global", query)
+  const globals = await getData("kozvetito-global", query)
   //console.log("globals", globals)
 
   return globals.data as GlobalAttributes
