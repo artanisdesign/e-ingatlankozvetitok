@@ -52,7 +52,7 @@ export const siteConfig = {
       siteName: NAME,
       images: [
         {
-          url: "/og-image-n.jpg",
+          url: "/og-image-n.png",
           width: 1200,
           height: 630,
           alt: NAME,
