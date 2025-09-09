@@ -41,8 +41,8 @@ export default function SiteHeader({ data }: { data: HeaderData }) {
             asChild
             className="sm:text-md xs:mr-0.5 -ml-5 rounded-lg text-sm sm:mr-2"
           >
-            <Link href="/blog" aria-label="IngatlanBlog">
-              <span className="flex max-[500px]:hidden">Ingatlan</span>Blog
+            <Link href="/blog" aria-label="Blog">
+              <span className="flex max-[500px]:hidden"></span>Blog
             </Link>
           </Button>
           <Button

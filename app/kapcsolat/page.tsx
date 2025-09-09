@@ -101,7 +101,7 @@ export default async function ContactPage() {
             </svg>
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-200">
-                Tudásbázis
+                Tudástár
               </h3>
               <p className="mt-1 text-sm text-gray-500">
                 Itt talál választ az ingatlanügyekkel kapcsolatos leggyakoribb
@@ -111,7 +111,7 @@ export default async function ContactPage() {
                 className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
                 href="/tudasbazis"
               >
-                Tovább a tudásbázisra
+                Tovább a tudástárra
                 <svg
                   className="size-2.5 transition ease-in-out group-hover:translate-x-1"
                   width="16"
@@ -135,7 +135,7 @@ export default async function ContactPage() {
             <Icons.messageDashed className="mt-1.5 size-6 shrink-0 text-gray-800 dark:text-gray-200" />
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-200">
-                IngatlanBlog
+                Blog
               </h3>
               <p className="mt-1 text-sm text-gray-500">
                 Olvasson a legfrissebb trendekről, jogi tanácsokról és piaci

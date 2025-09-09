@@ -259,13 +259,13 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               />
 
               <HelpCard
-                title="Tudásbázis"
+                title="Tudástár"
                 subtitle="Válaszok a leggyakoribb kérdésekre"
                 link="/tudasbazis"
                 icon={<Icons.bookOpen className="size-10 p-1" />}
               />
               <HelpCard
-                title="IngatlanBlog"
+                title="Blog"
                 subtitle="Amit az ingatlanokról tudni érdemes"
                 link="/blog"
                 icon={<Icons.newspaper className="size-10 p-1" />}

@@ -29,17 +29,17 @@ export const siteConfig = {
       id: "ProductLinks",
     },
     {
-      title: "Társulás",
+      title: "Tudástár",
       id: "CompanyLinks",
     },
     {
       title: "Disclaimerek",
       id: "DisclaimerLinks",
     },
-    /*{
+    {
       title: "Városok",
       id: "CityLinks",
-    },*/
+    },
   ],
   links: {},
   defaultSeo: {
