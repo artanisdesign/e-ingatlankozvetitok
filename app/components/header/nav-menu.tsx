@@ -42,7 +42,7 @@ export function NavigationMenuTop({ data }: { data: HeaderData }) {
         <MyItem
           title="Tudástár"
           data={data.sellers}
-          isActive={value === "Eladóknak"}
+          isActive={value === "Tudástár"}
           firstElement={<ContractPhone />}
         />
       </NavigationMenuList>
