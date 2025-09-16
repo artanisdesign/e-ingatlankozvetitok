@@ -12,7 +12,7 @@ import getHeadings from "../lib/getHeadings"
 import { getImageWithPlaceholder } from "../lib/image-with-placeholder"
 import SzaLogo from "../components/icons/SzaLogo"
 
-const slug = "csapatunk"
+const slug = "ingatlankozvetito-ugyved"
 
 export async function generateMetadata(): Promise<Metadata> {
   const metaGlobal = await getGlobals()

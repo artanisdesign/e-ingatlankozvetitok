@@ -200,7 +200,7 @@ export async function getAuthorSlugs(): Promise<
     }
   )
 
-  const slugs = await getData("authors", query)
+  const slugs = await getData("kozvetito-authors", query)
 
   return slugs.data.map((post: any) => ({
     slug: post.slug,
