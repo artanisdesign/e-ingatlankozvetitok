@@ -57,7 +57,6 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
     notFound()
   }
 
-  //const recommendations = getRecommendedArticles(post?.documentId)
 
   //TODO: move this out to a helper function
   let textContent = post.content

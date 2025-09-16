@@ -192,7 +192,7 @@ export default async function LawyerPage(props: BlogPageProps) {
                 href={
                   "mailto:" +
                   email +
-                  "?subject=e-ingatlanugyvedek.hu megkeresés"
+                  "?subject=e-ingatlankozvetitok.hu megkeresés"
                 }
                 className="hover:text-teal-500"
               >

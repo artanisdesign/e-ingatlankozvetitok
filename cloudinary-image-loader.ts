@@ -9,7 +9,7 @@ export default function cloudinaryLoader({
 }) {
   const CLOUDINARY_URL = "https://res.cloudinary.com/cc-images/image/upload/"
   //const URL = "https://res.cloudinary.com/cc-images/image/upload/"
-  const URL = "https://imgs.e-ingatlanugyvedek.hu/cc-images/image/upload/"
+  const URL = "https://imgs.e-ingatlankozvetitok.hu/cc-images/image/upload/"
 
   if (src.startsWith("/")) return src
   const _SRC = src.replace(CLOUDINARY_URL, "")

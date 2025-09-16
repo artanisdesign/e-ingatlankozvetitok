@@ -134,11 +134,11 @@ export default function ContactFormMortgage({
             />
             <HelpCard
               title="Email"
-              subtitle="info@e-ingatlanugyvedek.hu"
+              subtitle="info@e-ingatlankozvetitok.hu"
               icon={
                 <Icons.mail className="mt-1.5 size-6 shrink-0 text-gray-800 dark:text-gray-200" />
               }
-              link="mailto:info@e-ingatlanugyvedek.hu?subject=Érdeklődés hitelközvetítéssel kapcsolatban"
+              link="mailto:info@e-ingatlankozvetitok.hu?subject=Érdeklődés hitelközvetítéssel kapcsolatban"
               basicLink
             />
           </div>

@@ -28,7 +28,7 @@ export default async function ContactPage() {
           {
             telephone: "+36707191347",
             contactType: "Ügyfélszolgálat",
-            email: "info@e-ingatlanugyvedek.hu",
+            email: "info@e-ingatlankozvetitok.hu",
             areaServed: "HU",
             availableLanguage: ["English", "Hungarian"],
           },
@@ -75,11 +75,11 @@ export default async function ContactPage() {
         />
         <HelpCard
           title="Email"
-          subtitle="info@e-ingatlanugyvedek.hu"
+          subtitle="info@e-ingatlankozvetitok.hu"
           icon={
             <Icons.mail className="mt-1.5 size-6 shrink-0 text-gray-800 dark:text-gray-200" />
           }
-          link="mailto:info@e-ingatlanugyvedek.hu?subject=Érdeklődés"
+          link="mailto:info@e-ingatlankozvetitok.hu?subject=Érdeklődés"
           basicLink
         />
       </div>
@@ -210,9 +210,9 @@ export default async function ContactPage() {
               </p>
               <Link
                 className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                href="mailto:info@e-ingatlanugyvedek.hu?subject=Érdeklődés"
+                href="mailto:info@e-ingatlankozvetitok.hu?subject=Érdeklődés"
               >
-                info@e-ingatlanugyvedek.hu
+                info@e-ingatlankozvetitok.hu
               </Link>
             </div>
           </div>

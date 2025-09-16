@@ -5,7 +5,7 @@ import { BlogPagePropsStatic, BlogPost } from "@/app/types/blog"
 import { GlobalAttributes } from "@/app/types/globals"
 
 import { Author, StaticPage } from "../types/pages"
-import items from "./recommendations.json"
+
 
 const onVercel = process.env.ON_VERCEL === "true"
 
@@ -402,20 +402,3 @@ async function getData(url: string, query: string) {
     .then((data) => data)
 }
 
-export function getRecommendedArticles(documentId: string) {
-  const found = items.find((item: any) => item.doc_id === documentId)
-
-  const recommendations =
-    found?.recommendations.filter(
-      (item: any) =>
-        !item.title.includes(".hu") &&
-        !item.slug.includes("adatvedelem") &&
-        !item.slug.includes("importance") &&
-        !item.slug.includes("legal") &&
-        !item.slug.includes("hungar") &&
-        !item.slug.includes("lawyer") &&
-        !item.slug.includes("aszf")
-    ) || []
-
-  return recommendations.sort(() => Math.random() - 0.5).splice(0, 6)
-}

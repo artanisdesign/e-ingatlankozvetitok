@@ -11,7 +11,7 @@ import {
   getGlobals,
   getPageBySlug,
   getPageSlugs,
- // getRecommendedArticles,
+  // getRecommendedArticles,
 } from "@/app/lib/api"
 import { StaticPageProps } from "@/app/types/pages"
 
@@ -76,8 +76,6 @@ export default async function StaticPageDetails(props: StaticPageProps) {
       extraCategories = page.page_categories
     }
   }
-
-  //const recommendations = getRecommendedArticles(page?.documentId)
 
   const cats =
     extraCategories && extraCategories.length > 0 ? extraCategories : []
