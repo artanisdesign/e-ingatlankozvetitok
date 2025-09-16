@@ -23,7 +23,7 @@ import {
   getGlobals,
   getPostBySlug,
   getPostSlugs,
-  getRecommendedArticles,
+  //getRecommendedArticles,
 } from "@/app/lib/api"
 import { generateSeoObject } from "@/app/lib/generate-seo-object"
 import getHeadings from "@/app/lib/getHeadings"
@@ -57,7 +57,7 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
     notFound()
   }
 
-  const recommendations = getRecommendedArticles(post?.documentId)
+  //const recommendations = getRecommendedArticles(post?.documentId)
 
   //TODO: move this out to a helper function
   let textContent = post.content

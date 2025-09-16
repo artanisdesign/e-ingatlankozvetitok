@@ -28,22 +28,22 @@ export function NavigationMenuTop({ data }: { data: HeaderData }) {
     >
       <NavigationMenuList>
         <MyItem
-          title="Vevőknek"
-          data={data.buyers}
-          isActive={value === "Vevőknek"}
-          firstElement={<Contract />}
-        />
-        <MyItem
-          title="Eladóknak"
-          data={data.sellers}
-          isActive={value === "Eladóknak"}
-          firstElement={<ContractPhone />}
-        />
-        <MyItem
           title="Szolgáltatások"
           data={data.services}
           isActive={value === "Szolgáltatások"}
           firstElement={<Contract />}
+        />
+        <MyItem
+          title="Élethelyzetek"
+          data={data.buyers}
+          isActive={value === "Élethelyzetek"}
+          firstElement={<Contract />}
+        />
+        <MyItem
+          title="Tudástár"
+          data={data.sellers}
+          isActive={value === "Tudástár"}
+          firstElement={<ContractPhone />}
         />
       </NavigationMenuList>
     </NavigationMenu>

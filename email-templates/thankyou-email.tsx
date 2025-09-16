@@ -121,7 +121,7 @@ export function ThankYouEmail(props: ThankYouEmailProps) {
                   </Row>
                   <Row className="py-1">
                     <Link href="https://e-ingatlanugyvedek.hu/blog">
-                      IngatlanBlog
+                      Blog
                     </Link>
                   </Row>
                 </Column>

@@ -11,7 +11,7 @@ import {
   getGlobals,
   getPageBySlug,
   getPageSlugs,
-  getRecommendedArticles,
+ // getRecommendedArticles,
 } from "@/app/lib/api"
 import { StaticPageProps } from "@/app/types/pages"
 
@@ -77,7 +77,7 @@ export default async function StaticPageDetails(props: StaticPageProps) {
     }
   }
 
-  const recommendations = getRecommendedArticles(page?.documentId)
+  //const recommendations = getRecommendedArticles(page?.documentId)
 
   const cats =
     extraCategories && extraCategories.length > 0 ? extraCategories : []
@@ -259,13 +259,13 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               />
 
               <HelpCard
-                title="Tudásbázis"
+                title="Tudástár"
                 subtitle="Válaszok a leggyakoribb kérdésekre"
                 link="/tudasbazis"
                 icon={<Icons.bookOpen className="size-10 p-1" />}
               />
               <HelpCard
-                title="IngatlanBlog"
+                title="Blog"
                 subtitle="Amit az ingatlanokról tudni érdemes"
                 link="/blog"
                 icon={<Icons.newspaper className="size-10 p-1" />}

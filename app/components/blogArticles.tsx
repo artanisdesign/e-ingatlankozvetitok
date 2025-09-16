@@ -20,7 +20,7 @@ export default async function BlogArticles() {
        
         <div className="mx-auto mb-10 max-w-7xl text-center lg:mb-20">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            IngatlanBlog
+            Blog
           </h2>
           <p className="mt-1 text-gray-600 dark:text-gray-400 md:text-lg lg:text-xl">
             Mindent, amit az ingatlanokról és az ingatlanpiacról tudni érdemes!
