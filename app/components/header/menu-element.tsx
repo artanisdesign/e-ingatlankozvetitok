@@ -75,9 +75,11 @@ export const MenuElement = ({
         target="_blank"
         rel="noopener noreferrer"
         key={id}
-        className="group flex gap-x-5 rounded-md p-4 text-teal-500 transition-colors hover:bg-gray-100 dark:text-teal-500 dark:hover:bg-gray-900"
+        className="group flex gap-x-5 rounded-md p-4 text-teal-500 transition-colors duration-100 hover:bg-gray-100 dark:text-teal-500 dark:hover:bg-gray-900"
       >
-        {myIcon(icon, title)}
+        <span className="transition-transform group-hover:rotate-12 group-hover:scale-110">
+          {myIcon(icon, title)}
+        </span>
         <div className="grow-0">
           <p className="font-medium text-gray-800 dark:text-gray-200">
             {title}
@@ -92,11 +94,13 @@ export const MenuElement = ({
 
   return (
     <NavigationMenuLink
-      className="group flex gap-x-5 rounded-md p-4 text-teal-500 transition-colors hover:bg-gray-100 dark:text-teal-500 dark:hover:bg-gray-900"
+      className="group flex gap-x-5 rounded-md p-4 text-teal-500 transition-colors duration-100 hover:bg-gray-100 dark:text-teal-500 dark:hover:bg-gray-900"
       asChild
     >
       <Link href={url} key={id}>
-        {myIcon(icon, title)}
+        <span className="transition-transform group-hover:rotate-12 group-hover:scale-110">
+          {myIcon(icon, title)}
+        </span>
         <div className="grow-0">
           <p className="font-medium text-gray-800 dark:text-gray-200">
             {title}

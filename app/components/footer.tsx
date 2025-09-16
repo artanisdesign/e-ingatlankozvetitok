@@ -51,7 +51,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 title="Facebook"
                 target="_blank"
               >
-                <Facebook className="text-muted-foreground transition-colors hover:text-white"></Facebook>
+                <Facebook className="text-muted-foreground transition-colors hover:text-secondary"></Facebook>
               </Link>
               <Link
                 href="https://www.instagram.com/eingatlanugyvedek.hu"
@@ -60,7 +60,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 title="Instagram"
                 target="_blank"
               >
-                <InstagramIcon className="text-muted-foreground transition-colors hover:text-white" />
+                <InstagramIcon className="text-muted-foreground transition-colors hover:text-secondary" />
               </Link>
               <Link
                 href="https://www.youtube.com/@e-ingatlankozvetitok"
@@ -69,7 +69,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 title="Youtube"
                 target="_blank"
               >
-                <YoutubeIcon className="text-muted-foreground transition-colors hover:text-white" />
+                <YoutubeIcon className="text-muted-foreground transition-colors hover:text-secondary" />
               </Link>
 
               <Link
@@ -79,7 +79,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 title="TikTok"
                 target="_blank"
               >
-                <TikTokSVG className="text-muted-foreground transition-colors hover:text-white" />
+                <TikTokSVG className="text-muted-foreground transition-colors hover:text-secondary" />
               </Link>
             </div>
           </div>
@@ -87,13 +87,13 @@ export default function Footer({ data }: { data: FooterData }) {
             .filter((item) => item.id !== "CityLinks")
             .map((nav) => (
               <div className="col-span-1" key={nav.id}>
-                <p className="mb-2 font-bold text-gray-50">{nav.title}</p>
+                <p className="mb-2 font-bold text-teal-400">{nav.title}</p>
 
                 {(data[nav.id as keyof FooterData] as LinkData[]).map(
                   (submenu) => (
                     <p key={submenu.id}>
                       <Link
-                        className="my-1.5 inline-flex gap-x-2 text-gray-300 transition-colors hover:text-gray-50"
+                        className="my-1.5 inline-flex gap-x-2 text-gray-400 transition-colors hover:text-secondary"
                         href={submenu.url}
                         target={submenu.newTab ? "_blank" : undefined}
                       >
@@ -120,7 +120,7 @@ export default function Footer({ data }: { data: FooterData }) {
                   (submenu) => (
                     <p key={submenu.id}>
                       <Link
-                        className="my-1.5 inline-flex gap-x-2 text-gray-300 transition-colors  hover:text-gray-50"
+                        className="my-1.5 inline-flex gap-x-2 text-gray-400 transition-colors  hover:text-secondary"
                         href={submenu.url}
                         target={submenu.newTab ? "_blank" : undefined}
                       >

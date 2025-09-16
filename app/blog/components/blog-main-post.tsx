@@ -11,7 +11,7 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
 
   if (post) {
     return (
-      <div className="mb-16 mt-10 grid gap-8 sm:grid-cols-2 sm:items-center lg:mb-24">
+      <div className="mb-16 mt-10 grid gap-8 rounded-2xl border bg-white/80 p-4 dark:border-teal-900 dark:bg-gray-900/60 sm:grid-cols-2 sm:items-center lg:mb-24">
         <div className="sm:order-2">
           <div className="relative overflow-hidden rounded-lg border  bg-muted pt-[50%] sm:pt-[100%]">
             {cover && cover.url && (
@@ -26,8 +26,8 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
           </div>
         </div>
 
-        <div className="px-4 sm:order-1 sm:col-span-1 sm:px-0">
-          <p className="mb-5 inline-flex items-center gap-1.5 rounded-md bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+        <div className="px-4 sm:order-1 sm:col-span-1 sm:px-4">
+          <p className="mb-5 inline-flex items-center gap-1.5 rounded-md bg-secondary px-3 py-1.5 text-xs font-medium text-white ">
             Legfrissebb
           </p>
 
@@ -39,7 +39,10 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
               {post.title}
             </Link>
           </h2>
-          <Link className="group" href={"/ingatlan-kozvetito-ugyved/" + author?.slug}>
+          <Link
+            className="group"
+            href={"/ingatlan-kozvetito-ugyved/" + author?.slug}
+          >
             <div className="mt-6 flex items-center sm:mt-10">
               <div className="shrink-0">
                 <Image

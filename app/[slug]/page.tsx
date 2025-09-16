@@ -219,12 +219,12 @@ export default async function StaticPageDetails(props: StaticPageProps) {
                     key={category.id}
                     className="group"
                   >
-                    <Card className="bg-gray-50/50 py-4 transition group-hover:translate-y-1 group-hover:shadow-md dark:bg-gray-950">
+                    <Card className="bg-white py-4 transition group-hover:translate-y-1 border border-gray-200 dark:border-teal-900 dark:bg-gray-900/80">
                       <CardHeader className="relative flex  h-full flex-row  items-center justify-between">
                         <CardTitle className="mr-2 text-lg transition-all group-hover:text-teal-500 sm:text-2xl ">
                           {(category as unknown as StaticPageCategory).title}
                         </CardTitle>
-                        <Icons.arrowRight className="size-8 shrink-0 text-teal-200 transition ease-in-out group-hover:text-amber-500 dark:text-teal-900" />
+                        <Icons.arrowRight className="size-8 shrink-0 text-teal-500 transition ease-in-out group-hover:text-amber-500 dark:text-teal-900" />
                       </CardHeader>
                     </Card>
                   </Link>
@@ -297,7 +297,6 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               <BlogThumbnailSidebar post={post} key={i} />
             ))}
             <ReturnToBlogButton title="További cikkek" isForward={true} />
-           
           </div>
         </div>
       </div>

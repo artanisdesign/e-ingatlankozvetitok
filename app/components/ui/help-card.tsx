@@ -16,9 +16,9 @@ export function HelpCard({
   basicLink?: boolean
 }) {
   const className =
-    "group flex flex-col rounded-xl border bg-white shadow-sm transition duration-200 ease-in-out hover:translate-y-1 hover:shadow-md dark:border-teal-800 dark:bg-teal-950"
+    "group flex flex-col rounded-xl border bg-white shadow-sm transition duration-200 ease-in-out hover:translate-y-1 hover:shadow-md dark:border-teal-900 dark:bg-gray-900/60"
   const content = (
-    <div className="flex p-4 md:p-5">
+    <div className="flex p-4 dark:hover:text-teal-500 md:p-5">
       {icon}
       <div className="ml-5 grow">
         <h3 className="font-semibold text-gray-800 duration-100 ease-in-out group-hover:text-teal-600 dark:text-gray-200 dark:group-hover:text-teal-500">
