@@ -21,11 +21,10 @@ export const siteConfig = {
     "https://e-ingatlankozvetitok.hu",
     "https://e-ingatlanközvetítők.hu",
   ],
-  //GA_MEASUREMENT_ID: "G-W33WQZF8T3",
-  GA_MEASUREMENT_ID: "GTM-NZZD4MMQ_",
+  GA_MEASUREMENT_ID: "GTM-TXL83LMH",
   footerNav: [
     {
-      title: "Szolgáltatások",
+      title: "Rólunk",
       id: "ProductLinks",
     },
     {
