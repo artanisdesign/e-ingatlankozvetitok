@@ -44,7 +44,7 @@ export function AuthorCard({
             className="flex rounded-lg"
             asChild
           >
-            <Link href={siteConfig.url + "/csapatunk"}>
+            <Link href={siteConfig.url + "/ingatlankozvetito-ugyved"}>
               <p className="flex font-semibold">
                 Csapatunk <Icons.users className="ml-1 size-4" />
               </p>

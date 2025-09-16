@@ -32,7 +32,7 @@ export function OurTeam({ data }: { data: OurTeamBlock }) {
             asChild
             className="mr-4  rounded-lg"
           >
-            <Link href={data.url ?? "/csapatunk"}>
+            <Link href={data.url ?? "/ingatlankozvetito-ugyved"}>
               Csapatunk <Icons.chevronRight className="ml-1 size-4" />
             </Link>
           </Button>

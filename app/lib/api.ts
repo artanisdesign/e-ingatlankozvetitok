@@ -23,7 +23,7 @@ export async function getPageSlugs(): Promise<BlogPagePropsStatic["params"][]> {
       },
       filters: {
         slug: {
-          $notIn: ["csapatunk", "english"], //exclude team page
+          $notIn: ["ingatlankozvetito-ugyved", "english"], //exclude team page
         },
       },
       fields: ["slug", "publishedAt", "updatedAt"],

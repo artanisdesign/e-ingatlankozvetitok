@@ -133,7 +133,7 @@ export default async function LawyerPage(props: BlogPageProps) {
               {
                 position: 1,
                 name: "Csapatunk",
-                item: siteConfig.url + "/csapatunk",
+                item: siteConfig.url + "/ingatlankozvetito-ugyved",
               },
               {
                 position: 2,

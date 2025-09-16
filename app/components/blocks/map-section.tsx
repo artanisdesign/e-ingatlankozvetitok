@@ -19,7 +19,7 @@ export function MapSection() {
         variant={"primary"}
         className="rounded-lg w-fit lg:-mx-10 z-10"
       >
-        <Link href="/csapatunk">Csapatunk</Link>
+        <Link href="/ingatlankozvetito-ugyved">Csapatunk</Link>
       </Button>
       <HuMap />
     </div>
