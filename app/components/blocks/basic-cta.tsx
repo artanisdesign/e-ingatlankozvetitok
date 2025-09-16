@@ -31,7 +31,7 @@ export function BasicCTA({ data }: { data: BasicCTABlock }) {
         <div className="flex w-full items-center justify-center">
           {topText && buttonLink && (
             <Link
-              className="group mb-6 inline-flex items-center justify-center gap-x-2 self-center rounded-full  bg-slate-900 p-1 pr-2 text-center text-sm font-medium text-teal-50 transition hover:text-teal-500 focus:outline-none"
+              className="group mb-6 inline-flex items-center justify-center gap-x-2 self-center rounded-full  bg-gray-900/60 p-1 pr-2 text-center text-sm font-medium text-teal-50 transition hover:text-teal-500 focus:outline-none"
               href={buttonLink}
             >
               <span className="mr-2 rounded-full bg-teal-600 p-1 px-2 transition group-hover:text-white">

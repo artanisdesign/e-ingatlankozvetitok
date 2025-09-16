@@ -40,7 +40,7 @@ export function BlogFeaturedPost({ post }: { post?: BlogPost }) {
               {post.title}
             </Link>
           </h2>
-          <Link className="group" href={"/ingatlan-ugyved/" + author?.slug}>
+          <Link className="group" href={"/ingatlan-kozvetito-ugyved/" + author?.slug}>
             <div className="mt-6 flex items-center sm:mt-10">
               <div className="shrink-0">
                 <Image

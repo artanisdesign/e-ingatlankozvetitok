@@ -84,7 +84,7 @@ export function generateSeoObject(
       generatedMetadata.authors = [
         {
           name: (author.prefix ?? "") + " " + author.name,
-          url: siteConfig.url + "/ingatlan-ugyved/" + author.slug,
+          url: siteConfig.url + "/ingatlan-kozvetito-ugyved/" + author.slug,
         },
       ]
     }

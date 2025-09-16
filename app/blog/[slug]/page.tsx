@@ -11,10 +11,8 @@ import { BlogThumbnailSidebar } from "@/app/blog/components/blog-thumbnail"
 import { AuthorCard } from "@/app/components/blocks/author-card"
 import { FAQSection } from "@/app/components/blocks/faq-section"
 import { PageTitle } from "@/app/components/blocks/page-title"
-import RelatedArticles from "@/app/components/blocks/related-articles"
-import SearchBlock from "@/app/components/blocks/search-block"
 import TOC from "@/app/components/blocks/toc"
-import { Contract } from "@/app/components/header/contract-offer"
+
 import { SectionImage } from "@/app/components/section-renderer/section-image"
 import { SectionText } from "@/app/components/section-renderer/section-text"
 import { Badge } from "@/app/components/ui/badge"
@@ -125,7 +123,7 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
                 "name": "${author?.name ?? ""}",
                 "email": "${author?.email ?? ""}",
                 "honorificPrefix": "${author?.prefix ?? ""}",
-                "url": "${siteConfig.url + "/ingatlan-ugyved/" + author?.slug}",
+                "url": "${siteConfig.url + "/ingatlan-kozvetito-ugyved/" + author?.slug}",
                 "sameAs": [${(author?.sameAsLinks ?? "")
                   .split(",")
                   .map((link) => `"${link.trim()}"`)}]
@@ -155,7 +153,7 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
       <div className="col-span:3 relative w-full max-w-full lg:col-span-2">
         {/* authorlink*/}
         <Link
-          href={"/ingatlan-ugyved/" + author.slug}
+          href={"/ingatlan-kozvetito-ugyved/" + author.slug}
           className="group mb-6 flex flex-row items-center space-x-2 text-sm content-visibility-visible"
         >
           <Image

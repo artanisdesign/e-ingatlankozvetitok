@@ -91,7 +91,7 @@ export default function SectionRenderer({ blocks = [] }: { blocks: Block[] }) {
         name: data.name,
         honorificPrefix: data.prefix ?? "",
         email: data.email,
-        url: siteConfig.url + "/ingatlan-ugyved/" + data.slug,
+        url: siteConfig.url + "/ingatlan-kozvetito-ugyved/" + data.slug,
         sameAs: data.sameAsLinks.split(",").map((link) => `${link.trim()}`),
       },
       copyrightNotice: fullName,

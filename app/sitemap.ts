@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   const authorRoutes = authors.map((item) => ({
-    url: `${URL}/ingatlan-ugyved/${item.slug}`,
+    url: `${URL}/ingatlan-kozvetito-ugyved/${item.slug}`,
     lastModified: item.updatedAt || item.publishedAt,
   }))
 

@@ -140,7 +140,7 @@ export default async function StaticPageDetails(props: StaticPageProps) {
                   "honorificPrefix": "${author.prefix ?? ""}",
                   "email": "${author?.email}",
                   "url": "${
-                    siteConfig.url + "/ingatlan-ugyved/" + author.slug
+                    siteConfig.url + "/ingatlan-kozvetito-ugyved/" + author.slug
                   }",
                   "sameAs": [${author.sameAsLinks
                     .split(",")

@@ -145,7 +145,7 @@ export default function ContactForm({
   }
 
   return (
-    <div className="mb-8 grid rounded-xl border bg-white/60 p-4 dark:border-teal-800 dark:bg-teal-950/40 sm:p-6 lg:p-8">
+    <div className="mb-8 grid rounded-xl border bg-white/60 p-4 dark:border-teal-950 dark:bg-gray-900/60 sm:p-6 lg:p-8">
       <h2
         className="mb-4 text-xl font-semibold text-gray-800 dark:text-gray-200"
         id="kapcsolatfelvetel"

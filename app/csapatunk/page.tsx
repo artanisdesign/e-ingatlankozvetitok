@@ -57,7 +57,7 @@ export default async function TeamPage() {
             className="group relative col-span-1 mx-auto  w-full shrink-0 items-center justify-center place-self-center overflow-hidden rounded-xl before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t sm:max-w-md   md:h-full md:max-h-full"
           >
             <Link
-              href={"/ingatlan-ugyved/" + item.slug}
+              href={"/ingatlan-kozvetito-ugyved/" + item.slug}
               className="group col-span-1 flex h-full flex-col items-center justify-center rounded-xl border-4 border-dashed  p-2  dark:border-gray-700 dark:bg-slate-900"
             >
               <Image

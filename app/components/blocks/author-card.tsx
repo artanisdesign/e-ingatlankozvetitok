@@ -19,7 +19,7 @@ export function AuthorCard({
   updatedAt?: string
 }) {
   return (
-    <div className="group mt-12 flex w-full flex-col gap-10 rounded-xl border bg-white p-6 shadow-sm transition duration-200 ease-in-out content-visibility-auto hover:shadow-md dark:border-gray-800 dark:bg-slate-900 sm:flex-row sm:content-visibility-visible md:flex-row md:p-10">
+    <div className="group mt-12 flex w-full flex-col gap-10 rounded-xl border bg-white p-6 shadow-sm transition duration-200 ease-in-out content-visibility-auto hover:shadow-md dark:border-teal-950 dark:bg-gray-900/60 sm:flex-row sm:content-visibility-visible md:flex-row md:p-10">
       <Avatar className="flex size-32 shrink-0 self-center ring-4 transition-all duration-500 ease-in-out group-hover:scale-110 sm:self-start">
         <Image
           src={author.avatar.url}
@@ -64,7 +64,7 @@ export function AuthorCard({
           className="mt-5 flex w-min min-w-max rounded-lg"
           asChild
         >
-          <Link href={"/ingatlan-ugyved/" + author.slug}>
+          <Link href={"/ingatlan-kozvetito-ugyved/" + author.slug}>
             Szerzői profil <Icons.chevronRight className="ml-1 size-4" />
           </Link>
         </Button>

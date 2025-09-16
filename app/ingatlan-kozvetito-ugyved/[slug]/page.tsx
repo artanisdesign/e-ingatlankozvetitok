@@ -34,7 +34,7 @@ export async function generateMetadata(
 
   const author = await getAuthorBySlug(params.slug)
   if (!author) {
-    return generateSeoObject(metaGlobal, null, "ingatlan-ugyved/" + params.slug)
+    return generateSeoObject(metaGlobal, null, "ingatlan-kozvetito-ugyved/" + params.slug)
   }
 
   const {
@@ -62,7 +62,7 @@ export async function generateMetadata(
     },
   }
 
-  return generateSeoObject(metaGlobal, obj, "ingatlan-ugyved/" + params.slug)
+  return generateSeoObject(metaGlobal, obj, "ingatlan-kozvetito-ugyved/" + params.slug)
 }
 
 export default async function LawyerPage(props: BlogPageProps) {
@@ -138,7 +138,7 @@ export default async function LawyerPage(props: BlogPageProps) {
               {
                 position: 2,
                 name: fullName,
-                item: siteConfig.url + "/ingatlan-ugyved/" + slug,
+                item: siteConfig.url + "/ingatlan-kozvetito-ugyved/" + slug,
               },
             ]}
             useAppDir={true}
@@ -161,7 +161,7 @@ export default async function LawyerPage(props: BlogPageProps) {
 
           <SectionText text={experience} />
 
-          <div className="group my-12 flex w-full flex-col gap-y-6 rounded-xl border bg-white p-6 shadow-sm transition duration-200 ease-in-out hover:shadow-md dark:border-gray-800 dark:bg-slate-900 md:flex-col  md:p-10">
+          <div className="group my-12 flex w-full flex-col gap-y-6 rounded-xl border bg-white p-6 shadow-sm transition duration-200 ease-in-out hover:shadow-md dark:border-teal-950 dark:bg-gray-900/60 md:flex-col  md:p-10">
             <h2 className="mb-2 text-2xl font-semibold">Adatok</h2>
             <p className="text-md flex flex-row flex-wrap gap-x-2">
               <Icons.landmark className="mb-2 mr-2 size-6 shrink-0" />
@@ -225,7 +225,7 @@ export default async function LawyerPage(props: BlogPageProps) {
           </p>
 
           <div className="grid grid-cols-1 items-center justify-center gap-y-8">
-            <div className="flex max-w-full flex-col gap-y-6 self-center rounded-xl border bg-white p-8 shadow-sm transition duration-200 ease-in-out hover:shadow-md dark:border-gray-800 dark:bg-slate-900 sm:mx-0 lg:mx-0">
+            <div className="flex max-w-full flex-col gap-y-6 self-center rounded-xl border bg-white p-8 shadow-sm transition duration-200 ease-in-out hover:shadow-md dark:border-teal-950 dark:bg-gray-900/60 sm:mx-0 lg:mx-0">
               {posts &&
                 posts.length > 0 &&
                 posts.map((post, i) => (

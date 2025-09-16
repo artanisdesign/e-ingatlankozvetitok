@@ -8,7 +8,7 @@ const FaqAccordion = dynamic(() => import("./faq-accordion"))
 export function FAQSection({ data }: { data: FAQ[] }) {
   return (
     <span className="mt-12 block border-y-DEFAULT">
-      <div className="mx-auto  grid  max-w-full gap-10 bg-gray-50/80 p-6 dark:bg-slate-900/60 md:grid-cols-6">
+      <div className="mx-auto  grid max-w-full gap-10  rounded-xl border bg-white p-6 dark:border-teal-950 dark:bg-gray-900/60 md:grid-cols-6">
         <FAQPageJsonLd
           useAppDir={true}
           mainEntity={data.map((faq) => ({
@@ -30,7 +30,6 @@ export function FAQSection({ data }: { data: FAQ[] }) {
           </p>
         </div>
         <div className="md:col-span-4">
-   
           {data && data.length > 0 && <FaqAccordion data={data} />}
         </div>
       </div>
