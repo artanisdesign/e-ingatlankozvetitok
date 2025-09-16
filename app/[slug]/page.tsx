@@ -259,7 +259,7 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               <HelpCard
                 title="Tudástár"
                 subtitle="Válaszok a leggyakoribb kérdésekre"
-                link="/tudasbazis"
+                link="/tudastar"
                 icon={<Icons.bookOpen className="size-10 p-1" />}
               />
               <HelpCard
@@ -297,12 +297,7 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               <BlogThumbnailSidebar post={post} key={i} />
             ))}
             <ReturnToBlogButton title="További cikkek" isForward={true} />
-            <p className="mb-0 pt-6 text-xl font-semibold text-gray-800 dark:text-gray-300">
-              Ajánlatunk
-            </p>
-            <div className="p-5 pt-0">
-              <Contract />
-            </div>
+           
           </div>
         </div>
       </div>

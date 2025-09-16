@@ -239,12 +239,7 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
             <BlogThumbnailSidebar post={post} key={i} />
           ))}
           <ReturnToBlogButton title="További cikkek" isForward={true} />
-          <p className="mb-0 pt-6 text-xl font-semibold text-gray-800 dark:text-gray-300">
-            Ajánlatunk
-          </p>
-          <div className="p-5 pt-0">
-            <Contract />
-          </div>
+         
         </div>
       </div>
 

@@ -37,15 +37,15 @@ export default function Footer({ data }: { data: FooterData }) {
               e-ingatlankozvetitok.hu
             </Link>
             <p className="mt-4 text-sm text-gray-400">
-              Tapasztalt ingatlan ügyvédek személyre szabott jogi segítséget
-              nyújtanak az adásvételi folyamat minden lépésében.
+              Tapasztalt ingatlan ügyvédek személyre szabott ingatlanközvetítői
+              szolgáltatást nyújtanak a lakáseladás minden lépésében.
               <br />
               <br />
               Kövess minket a közösségi csatornákon is!
             </p>
             <div className="mt-8 flex flex-row items-center gap-6">
               <Link
-                href="https://www.facebook.com/people/e-ingatlanügyvédekhu/61554936975477/"
+                href="https://www.facebook.com/eingatlankozvetitokhu/"
                 prefetch={false}
                 aria-label="Facebook"
                 title="Facebook"
@@ -63,16 +63,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 <InstagramIcon className="text-muted-foreground transition-colors hover:text-white" />
               </Link>
               <Link
-                href="https://www.linkedin.com/company/e-ingatlanugyvedek"
-                prefetch={false}
-                aria-label="Linkedin"
-                title="Linkedin"
-                target="_blank"
-              >
-                <LinkedinIcon className="text-muted-foreground transition-colors hover:text-white" />
-              </Link>
-              <Link
-                href="https://www.youtube.com/@e-ingatlanugyvedek"
+                href="https://www.youtube.com/@e-ingatlankozvetitok"
                 prefetch={false}
                 aria-label="Youtube"
                 title="Youtube"
@@ -82,7 +73,7 @@ export default function Footer({ data }: { data: FooterData }) {
               </Link>
 
               <Link
-                href="https://www.tiktok.com/@eingatlanugyvedek.hu"
+                href="https://www.tiktok.com/@e_ingatlankozvetitok"
                 prefetch={false}
                 aria-label="TikTok"
                 title="TikTok"

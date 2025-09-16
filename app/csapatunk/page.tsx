@@ -77,7 +77,7 @@ export default async function TeamPage() {
             </Link>
           </div>
         ))}
-        <Link
+        {/*<Link
           href={"/szoftver-ugyvedeknek"}
           className="group col-span-1 flex h-full flex-col items-center justify-center rounded-xl border-4 border-dashed bg-white p-5 shadow-sm  transition duration-200 ease-in-out hover:scale-105 dark:border-gray-700 dark:bg-slate-900"
         >
@@ -91,7 +91,8 @@ export default async function TeamPage() {
             Ha ön is szeretne csatlakozni hozzánk, kattintson ide és olvasson
             ügyvédeknek szóló ajánlatunkról.
           </p>
-        </Link>
+        </Link> */}
+        
       </div>
       <div className="my-10 overflow-hidden rounded-lg">
         <iframe

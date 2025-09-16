@@ -17,7 +17,7 @@ export async function generateMetadata({
   return generateSeoObject(
     metaGlobal,
     {
-      title: "IngatlanBlog",
+      title: "Blog",
     },
     "blog"
   )
@@ -30,7 +30,7 @@ export default async function BlogPage() {
   return (
     <main id="main" role="main">
       <div className="relative mx-auto mb-6 max-w-7xl p-6 lg:py-10">
-        <PageTitle title="IngatlanBlog" />
+        <PageTitle title="Blog" />
         <BlogMainPost post={filteredPosts[0]} />
         <BlogFeaturedPost post={featuredPosts[0]} />
         <div className="grid gap-10 lg:grid-cols-2 xl:gap-y-16">

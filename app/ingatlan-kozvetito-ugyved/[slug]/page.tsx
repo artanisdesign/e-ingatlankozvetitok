@@ -235,12 +235,7 @@ export default async function LawyerPage(props: BlogPageProps) {
               {posts && posts.length === 0 && <p>Még nincs bejegyzése</p>}
             </div>
             <ReturnToBlogButton title="További cikkek" isForward={true} />
-            <p className="mb-0 hidden pt-6 text-xl font-semibold text-gray-800 dark:text-gray-300 lg:block">
-              Ajánlatunk
-            </p>
-            <div className="hidden p-5 pt-0 lg:block">
-              <Contract />
-            </div>
+           
           </div>
         </div>
         <div className="lg:col-span-3"></div>

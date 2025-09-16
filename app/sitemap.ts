@@ -1,9 +1,11 @@
 // app/sitemap.js
 import { MetadataRoute } from "next"
-export const dynamic = 'force-static'
+
 import { siteConfig } from "@/config/site"
 
 import { getAllAuthors, getPageSlugs, getPostSlugs } from "./lib/api"
+
+export const dynamic = "force-static"
 
 const URL = siteConfig.url
 
@@ -29,10 +31,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: updatedAt || publishedAt,
   }))
 
-  const routes = ["", "/kapcsolat", "/blog", "/csapatunk", "/dokumentum-asszisztens","/english"].map((route) => ({
-    url: `${URL}${route}`,
-    lastModified: new Date().toISOString(),
-  }))
+  const routes = ["", "/kapcsolat", "/blog", "/csapatunk", "/english"].map(
+    (route) => ({
+      url: `${URL}${route}`,
+      lastModified: new Date().toISOString(),
+    })
+  )
 
   return [...routes, ...postRoutes, ...pageRoutes, ...authorRoutes]
 }

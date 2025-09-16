@@ -45,7 +45,7 @@ export default async function IndexPage() {
               </p>
               <Link
                 className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
-                href="/tudasbazis"
+                href="/tudastar"
               >
                 Tovább a tudástárra
                 <svg
