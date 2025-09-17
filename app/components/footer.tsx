@@ -27,6 +27,7 @@ export default function Footer({ data }: { data: FooterData }) {
               className=""
               href="https://szerzodes-asszisztens.hu"
               prefetch={false}
+              title="Szerződés Asszisztens"
               target="_blank"
               aria-label="szerzodes-asszisztens.hu"
             >
@@ -34,12 +35,13 @@ export default function Footer({ data }: { data: FooterData }) {
             </Link>
             <Link
               className=""
+              title="e-ingatlanügyvédek.hu"
               href="https://e-ingatlanugyvedek.hu"
               prefetch={false}
               target="_blank"
               aria-label="e-ingatlanugyvedek.hu"
             >
-              <EINGLogo className="absolute -top-11 left-8 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100 " />
+              <EINGLogo className="absolute top-2 left-[120px] lg:-top-11 lg:left-8 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100 " />
             </Link>
             <Image
               src={logo}

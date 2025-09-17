@@ -2,10 +2,13 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import ContactForm from "./components/blocks/contact-form"
-import { MainHero } from "./components/blocks/hero-section"
+import { Hero2 } from "./components/blocks/hero-2"
+import { Hero4 } from "./components/blocks/hero-4"
+import { Hero5 } from "./components/blocks/hero-5"
 import { Icons } from "./components/icons"
 import { getGlobals } from "./lib/api"
 import SectionRenderer from "./lib/section-renderer"
+import Hero1 from "./components/blocks/hero1"
 
 export default async function IndexPage() {
   const global = await getGlobals()
@@ -17,9 +20,13 @@ export default async function IndexPage() {
 
   return (
     <>
-      <MainHero />
+    <Hero1 />
+      <Hero2 />
+      <Hero4 />
+      <Hero5 />
       <SectionRenderer blocks={Blocks} />
-      <div className="mx-auto mb-20 mt-12 grid max-w-7xl items-center gap-6 p-6 content-visibility-auto sm:content-visibility-visible lg:grid-cols-2 lg:gap-16 2xl:p-0">
+
+      <div className="mx-auto my-32 grid max-w-7xl items-center gap-6 p-6 content-visibility-auto sm:content-visibility-visible lg:grid-cols-2 lg:gap-16 2xl:p-0">
         <ContactForm noHelpCards />
 
         <div className="divide-y divide-gray-200 dark:divide-gray-800">
@@ -37,7 +44,7 @@ export default async function IndexPage() {
             </svg>
             <div>
               <h3 className="font-semibold text-gray-800 dark:text-gray-200">
-              Tudástár
+                Tudástár
               </h3>
               <p className="mt-1 text-sm text-gray-500">
                 Itt talál választ az ingatlanügyekkel kapcsolatos leggyakoribb
