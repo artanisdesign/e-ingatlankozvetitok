@@ -243,7 +243,7 @@ export default function ContactFormMortgage({
                 Általános Szerződési Feltételeket
               </Link>{" "}
               valamint az{" "}
-              <Link href={"/adatvedelem-cookiek"} className="underline">
+              <Link href={"/gdpr"} className="underline">
                 Adatvédelmi tájékoztatót
               </Link>
               . A HitelesAndrás Kft.{" "}

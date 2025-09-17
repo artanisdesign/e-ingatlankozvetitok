@@ -4,7 +4,7 @@ const isProd = process.env.ON_VERCEL !== "true"
 
 const URL = isProd
   ? "https://e-ingatlankozvetitok.hu"
-  : "https://e-ingatlanugyvedek.vercel.app/"
+  : "https://e-ingatlanugyvedek.vercel.app"
 
 const NAME = "e-ingatlanközvetítők.hu"
 

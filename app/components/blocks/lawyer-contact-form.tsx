@@ -151,7 +151,7 @@ export default function LawyerContactForm() {
           <div className="mt-3 pt-4 text-center">
             <p className="text-xs text-gray-500">
               A Küldés gombra kattintva elfogadja az{" "}
-              <Link href={"/adatvedelem-cookiek"} className="underline">
+              <Link href={"/gdpr"} className="underline">
                 Adatvédelmi tájékoztatót
               </Link>
               .

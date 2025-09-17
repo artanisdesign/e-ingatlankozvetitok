@@ -391,7 +391,7 @@ export default function ContactForm({
                 Általános Szerződési Feltételeket
               </Link>{" "}
               valamint az{" "}
-              <Link href={"/adatvedelem-cookiek"} className="underline">
+              <Link href={"/gdpr"} className="underline">
                 Adatvédelmi tájékoztatót
               </Link>
               .
