@@ -24,7 +24,7 @@ export function NavigationMenuTop({ data }: { data: HeaderData }) {
       orientation="vertical"
       value={value}
       onValueChange={setValue}
-      className="z-50 mr-0 flex  max-w-fit rounded-lg bg-background/80 px-0 shadow-sm max-[480px]:h-12 max-[480px]:max-w-full max-[480px]:rounded-none sm:px-6 min-[850px]:bg-transparent min-[850px]:px-2 min-[850px]:shadow-none lg:mr-4"
+      className="z-50 mr-0 flex  max-w-fit rounded-lg bg-white/80 px-0 shadow-sm max-[480px]:h-12 max-[480px]:max-w-full max-[480px]:rounded-none sm:px-6 min-[850px]:bg-transparent min-[850px]:px-2 min-[850px]:shadow-none lg:mr-4"
     >
       <NavigationMenuList>
         <MyItem

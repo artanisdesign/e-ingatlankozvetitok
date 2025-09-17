@@ -8,7 +8,7 @@ import { Icons } from "../icons"
 import EINGLogo from "../icons/EINGLogo"
 import { Badge } from "../ui/badge"
 import { Button } from "../ui/button"
-import { Tilt, TiltCard } from "../ui/tilted-card"
+import { Tilt } from "../ui/tilted-card"
 
 interface Hero158Props {
   title?: string

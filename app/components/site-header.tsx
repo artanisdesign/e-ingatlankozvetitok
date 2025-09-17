@@ -14,7 +14,7 @@ import { Button } from "./ui/button"
 export default function SiteHeader({ data }: { data: HeaderData }) {
   return (
     <header className="z-100 flex w-full flex-wrap text-sm content-visibility-visible min-[900px]:flex-nowrap min-[900px]:justify-start">
-      <div className="absolute left-0 top-0 h-14 w-full bg-background shadow-sm dark:bg-background/30 min-[900px]:shadow-none"></div>
+      <div className="absolute left-0 top-0 h-14 w-full bg-white shadow-sm dark:bg-background/50 min-[900px]:shadow-none"></div>
 
       <div className="h-30 relative mx-auto flex h-14 w-full max-w-[85rem] items-center justify-between  px-3 min-[900px]:h-14 lg:px-6">
         <Link
@@ -35,6 +35,7 @@ export default function SiteHeader({ data }: { data: HeaderData }) {
           <span className="hidden content-visibility-hidden min-[900px]:flex min-[900px]:content-visibility-visible">
             <NavigationMenuTop data={data} />
           </span>
+          { /* */}
           <Button
             size={"sm"}
             variant="ghost"
@@ -49,7 +50,7 @@ export default function SiteHeader({ data }: { data: HeaderData }) {
             size={"sm"}
             variant={"primary"}
             asChild
-            className="m-0 hidden rounded-lg p-2 sm:p-3 md:flex"
+            className="m-0 hidden rounded-lg p-2 sm:p-3 sm:flex"
           >
             <Link href="/kapcsolat" aria-label="Kapcsolat">
               <span className="flex max-[500px]:hidden">Kapcsolat</span>
