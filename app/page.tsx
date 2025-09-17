@@ -2,7 +2,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import ContactForm from "./components/blocks/contact-form"
-import Hero1 from "./components/blocks/hero1"
+import Hero1 from "./components/blocks/hero-1"
 import { Hero2 } from "./components/blocks/hero-2"
 import { Hero4 } from "./components/blocks/hero-4"
 import { Hero5 } from "./components/blocks/hero-5"

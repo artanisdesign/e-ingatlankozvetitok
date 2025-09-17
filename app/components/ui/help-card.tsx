@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import { Tilt } from "./tilted-card"
+
 export function HelpCard({
   title,
   subtitle,
@@ -15,13 +17,14 @@ export function HelpCard({
   newPage?: boolean
   basicLink?: boolean
 }) {
-  const className =
-    "group flex flex-col rounded-xl border bg-white shadow-sm transition duration-200 ease-in-out hover:translate-y-1 hover:shadow-md dark:border-teal-900 dark:bg-gray-900/60"
+  const 
+  className =
+    "group flex flex-col rounded-xl border bg-white shadow-sm transition hover:shadow-md dark:border-teal-900 dark:bg-gray-900/60 dark:hover:border-teal-500 dark:hover:ring-1 dark:hover:ring-teal-500"
   const content = (
-    <div className="flex p-4 dark:hover:text-teal-500 md:p-5">
+    <div className="flex p-4 hover:text-teal-500 md:p-5 transition-colors">
       {icon}
       <div className="ml-5 grow">
-        <h3 className="font-semibold text-gray-800 duration-100 ease-in-out group-hover:text-teal-600 dark:text-gray-200 dark:group-hover:text-teal-500">
+        <h3 className="font-semibold text-gray-800 duration-300 ease-in-out transition-colors  dark:text-gray-200 ">
           {title}
         </h3>
         <p className="text-sm text-gray-500">{subtitle}</p>
@@ -30,16 +33,24 @@ export function HelpCard({
   )
 
   return basicLink ? (
-    <a className={className} href={link} target={newPage ? "_blank" : "_self"}>
-      {content}
-    </a>
+    <Tilt scale={1.025}>
+      <a
+        className={className}
+        href={link}
+        target={newPage ? "_blank" : "_self"}
+      >
+        {content}
+      </a>
+    </Tilt>
   ) : (
-    <Link
-      className={className}
-      href={link}
-      target={newPage ? "_blank" : "_self"}
-    >
-      {content}
-    </Link>
+    <Tilt scale={1.025}>
+      <Link
+        className={className}
+        href={link}
+        target={newPage ? "_blank" : "_self"}
+      >
+        {content}
+      </Link>
+    </Tilt>
   )
 }

@@ -4,6 +4,7 @@ import { ReturnToBlogButton } from "../blog/components/blog-button"
 import { BlogFeaturedPost } from "../blog/components/blog-featured-post"
 import { BlogMainPost } from "../blog/components/blog-main-post"
 import { BlogThumbnailGrid } from "../blog/components/blog-thumbnail"
+import { Tilt } from "./ui/tilted-card"
 
 export default async function BlogArticles() {
   const posts = await getAllPosts(8)
@@ -27,7 +28,10 @@ export default async function BlogArticles() {
           </p>
         </div>
         <BlogFeaturedPost post={featuredPosts[0]} />
-        <BlogMainPost post={filteredPosts[0]} />
+        <Tilt scale={1.01} maxTilt={2}>
+           <BlogMainPost post={filteredPosts[0]} />
+        </Tilt>
+       
         <div className="mb-20 grid gap-10 lg:grid-cols-2 xl:gap-y-16">
           {filteredPosts.map(
             (post, index) =>

@@ -8,6 +8,7 @@ import { Icons } from "../icons"
 import EINGLogo from "../icons/EINGLogo"
 import { Badge } from "../ui/badge"
 import { Button } from "../ui/button"
+import { Tilt, TiltCard } from "../ui/tilted-card"
 
 interface Hero158Props {
   title?: string
@@ -78,34 +79,40 @@ export default function Hero1({
         </div>
 
         {/* Right image collage */}
-        <div className="relative grid grid-cols-2 gap-4 px-0 sm:gap-12 sm:px-4 lg:px-0">
+        <div className="relative grid grid-cols-2 gap-2 px-0 sm:gap-8 sm:px-4 lg:px-0">
           <div className="col-span-1 flex flex-col">
-            <Image
-              src={images[0]}
-              alt="Dr. Surányi Balázs"
-              width={400}
-              priority={true}
-              height={500}
-              className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
-            />
+            <Tilt scale={1.05}>
+              <Image
+                src={images[0]}
+                alt="Dr. Surányi Balázs"
+                width={400}
+                priority={true}
+                height={500}
+                className="h-auto w-full rounded-xl object-cover shadow"
+              />
+            </Tilt>
           </div>
-          <div className="col-span-1 flex flex-col items-center justify-around gap-6 lg:gap-8">
-            <Image
-              src={images[1]}
-              alt="Dr. Szabó Judit Anna"
-              width={400}
-              priority={true}
-              height={300}
-              className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
-            />
-            <Image
-              src={images[2]}
-              priority={true}
-              alt="Dr. Illés Géza"
-              width={400}
-              height={300}
-              className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
-            />
+          <div className="col-span-1 flex flex-col items-center justify-around gap-2 sm:gap-8">
+            <Tilt scale={1.05}>
+              <Image
+                src={images[1]}
+                alt="Dr. Szabó Judit Anna"
+                width={400}
+                priority={true}
+                height={300}
+                className="h-full w-full rounded-xl object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
+              />
+            </Tilt>
+            <Tilt scale={1.05}>
+              <Image
+                src={images[2]}
+                priority={true}
+                alt="Dr. Illés Géza"
+                width={400}
+                height={300}
+                className="h-full w-full rounded-xl object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
+              />
+            </Tilt>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
 
   if (post) {
     return (
-      <div className="relative mb-16 mt-10 grid gap-8 overflow-hidden rounded-2xl border bg-white/80 p-4 dark:border-teal-900 dark:bg-gray-900/60 sm:grid-cols-2 sm:items-center lg:mb-24">
+      <div className="relative mb-16 mt-10 grid gap-8 overflow-hidden rounded-2xl border bg-white/80 p-4 dark:border-teal-900 dark:bg-gray-900/60 sm:grid-cols-2 sm:items-center lg:mb-24 hover:shadow transition-shadow">
         
         <div className="sm:order-2">
           <div className="relative overflow-hidden rounded-lg border bg-muted pt-[50%] sm:pt-[100%]">

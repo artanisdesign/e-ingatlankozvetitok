@@ -1,4 +1,5 @@
 import React from "react"
+import { Tilt } from "../ui/tilted-card"
 
 const DATA = [
   {
@@ -68,6 +69,7 @@ const Hero4 = () => {
 
         <div className="flex max-w-3xl flex-col justify-center gap-4">
           {DATA.map(({ id, title, description }) => (
+            <Tilt scale={1.1} key={id}>
             <div key={id} className="flex items-start gap-4 py-4">
               <div className="size-8 shrink-0 lg:size-12">
                 <svg
@@ -87,6 +89,7 @@ const Hero4 = () => {
                 </div>
               </div>
             </div>
+            </Tilt>
           ))}
         </div>
       </div>

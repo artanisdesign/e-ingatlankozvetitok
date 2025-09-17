@@ -12,7 +12,6 @@ import { AuthorCard } from "@/app/components/blocks/author-card"
 import { FAQSection } from "@/app/components/blocks/faq-section"
 import { PageTitle } from "@/app/components/blocks/page-title"
 import TOC from "@/app/components/blocks/toc"
-
 import { SectionImage } from "@/app/components/section-renderer/section-image"
 import { SectionText } from "@/app/components/section-renderer/section-text"
 import { Badge } from "@/app/components/ui/badge"
@@ -54,7 +53,6 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
   if (!post) {
     notFound()
   }
-
 
   //TODO: move this out to a helper function
   let textContent = post.content
@@ -123,7 +121,9 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
                 "name": "${author?.name ?? ""}",
                 "email": "${author?.email ?? ""}",
                 "honorificPrefix": "${author?.prefix ?? ""}",
-                "url": "${siteConfig.url + "/ingatlan-kozvetito-ugyved/" + author?.slug}",
+                "url": "${
+                  siteConfig.url + "/ingatlan-kozvetito-ugyved/" + author?.slug
+                }",
                 "sameAs": [${(author?.sameAsLinks ?? "")
                   .split(",")
                   .map((link) => `"${link.trim()}"`)}]
@@ -237,7 +237,6 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
             <BlogThumbnailSidebar post={post} key={i} />
           ))}
           <ReturnToBlogButton title="További cikkek" isForward={true} />
-         
         </div>
       </div>
 
