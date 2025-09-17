@@ -1,7 +1,7 @@
 import { Resend } from "resend"
 
 interface Env {
-  RESEND_KEY: string
+  RESEND_API_KEY: string
   APP_URL: string
 }
 const allowedOrigins = [
@@ -55,7 +55,7 @@ const templateLawyer = `
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context
 
-  const resend = new Resend(env.RESEND_KEY)
+  const resend = new Resend(env.RESEND_API_KEY)
 
   const origin = request.headers.get("Origin")
 
