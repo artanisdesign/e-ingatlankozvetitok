@@ -24,6 +24,7 @@ import TOC from "../components/blocks/toc"
 import { ClientRun } from "../components/client-run"
 import { Contract } from "../components/header/contract-offer"
 import { Icons } from "../components/icons"
+import EINGLogo from "../components/icons/EINGLogo"
 import SzaLogo from "../components/icons/SzaLogo"
 import { SectionImage } from "../components/section-renderer/section-image"
 import { SectionText } from "../components/section-renderer/section-text"
@@ -245,14 +246,14 @@ export default async function StaticPageDetails(props: StaticPageProps) {
               <HelpCard
                 title="Vevőknek"
                 subtitle="Ha ingatlant venne itt találja a tudnivalókat"
-                link="/ingatlan-tudnivalok-vevoknek"
+                link="/vevoimegbizas"
                 icon={<Icons.scrollText className="size-10 p-1" />}
               />
 
               <HelpCard
                 title="Eladóknak"
                 subtitle="Eladóként itt juthat hasznos tanácsokhoz"
-                link="/ingatlan-tudnivalok-eladoknak"
+                link="/ingatlankozvetites"
                 icon={<Icons.landmark className="size-10 p-1" />}
               />
 
@@ -269,10 +270,12 @@ export default async function StaticPageDetails(props: StaticPageProps) {
                 icon={<Icons.newspaper className="size-10 p-1" />}
               />
               <HelpCard
-                title="Ügyvédeknek"
-                subtitle="Együttműködési lehetőségek "
-                link="/szoftver-ugyvedeknek"
-                icon={<Icons.scale className="size-10 p-1" />}
+                title="Ügyvédek"
+                subtitle="e-ingatlanugyvedek.hu"
+                link="http://e-ingatlanugyvedek.hu"
+                basicLink={true}
+                newPage={true}
+                icon={<EINGLogo className="size-11 p-1" />}
               />
               <HelpCard
                 title="Szerződés Asszisztens"

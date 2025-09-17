@@ -32,14 +32,14 @@ export default function NotFoundPage() {
           <HelpCard
             title="Vevőknek"
             subtitle="Ha ingatlant venne itt találja a tudnivalókat"
-            link="/ingatlan-tudnivalok-vevoknek"
+            link="/vevoimegbizas"
             icon={<Icons.scrollText className="size-10" />}
           />
 
           <HelpCard
             title="Eladóknak"
             subtitle="Eladóként itt juthat hasznos tanácsokhoz"
-            link="/ingatlan-tudnivalok-eladoknak"
+            link="/ingatlankozvetites"
             icon={<Icons.landmark className="size-10" />}
           />
           <HelpCard
@@ -67,7 +67,7 @@ const HelpCard = function ({
 }) {
   return (
     <Link
-      className="group flex flex-col rounded-xl border bg-white shadow-sm transition duration-200 ease-in-out hover:translate-y-1 hover:shadow-md dark:border-teal-800 dark:bg-teal-900"
+      className="group flex flex-col rounded-xl border bg-white shadow-sm transition duration-200 ease-in-out hover:translate-y-1 hover:shadow-md dark:border-teal-800 dark:bg-gray-900/80"
       href={link}
     >
       <div className="p-4 md:p-5">

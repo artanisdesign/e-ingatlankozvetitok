@@ -38,7 +38,7 @@ export default async function ContactPage() {
         <h1 className="text-4xl font-extrabold text-gray-800 dark:text-white sm:text-5xl">
           Kapcsolatfelvétel
         </h1>
-        <p className="mt-24 text-gray-600 dark:text-gray-400">
+        <p className="mt-14 text-gray-600 dark:text-gray-400">
           Töltse ki az alábbi űrlapot, és 1 munkanapon belül visszahívjuk!
         </p>
       </div>

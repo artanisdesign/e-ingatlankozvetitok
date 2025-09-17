@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { BlogPost } from "@/app/types/blog"
+import { Icons } from "@/app/components/icons"
 
 export function BlogMainPost({ post }: { post?: BlogPost }) {
   const { cover } = post ?? { cover: null }
@@ -11,9 +12,10 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
 
   if (post) {
     return (
-      <div className="mb-16 mt-10 grid gap-8 rounded-2xl border bg-white/80 p-4 dark:border-teal-900 dark:bg-gray-900/60 sm:grid-cols-2 sm:items-center lg:mb-24">
+      <div className="relative mb-16 mt-10 grid gap-8 overflow-hidden rounded-2xl border bg-white/80 p-4 dark:border-teal-900 dark:bg-gray-900/60 sm:grid-cols-2 sm:items-center lg:mb-24">
+        
         <div className="sm:order-2">
-          <div className="relative overflow-hidden rounded-lg border  bg-muted pt-[50%] sm:pt-[100%]">
+          <div className="relative overflow-hidden rounded-lg border bg-muted pt-[50%] sm:pt-[100%]">
             {cover && cover.url && (
               <Image
                 src={cover.url}
@@ -26,7 +28,7 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
           </div>
         </div>
 
-        <div className="px-4 sm:order-1 sm:col-span-1 sm:px-4">
+        <div className="px-4 sm:order-1 sm:col-span-1 sm:px-4 z-10">
           <p className="mb-5 inline-flex items-center gap-1.5 rounded-md bg-secondary px-3 py-1.5 text-xs font-medium text-white ">
             Legfrissebb
           </p>
@@ -68,23 +70,10 @@ export function BlogMainPost({ post }: { post?: BlogPost }) {
               className="group overflow-hidden rounded-xl"
               href={"/blog/" + post.slug}
             >
-              <p className="text-md mt-4 inline-flex items-center gap-x-1 font-medium text-teal-600 group-hover:text-teal-600 dark:text-teal-500 ">
-                Tovább
-                <svg
-                  className="size-2.5 transition-transform duration-300 group-hover:translate-x-1"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </p>
+              <p className="text-md mt-4 inline-flex items-center  gap-x-1 font-medium text-teal-600 transition-all hover:translate-x-1 group-hover:text-secondary dark:text-teal-500">
+              Tovább
+              <Icons.arrowRight className="size-4 shrink-0 text-secondary opacity-0 transition-all ease-in-out group-hover:opacity-100 " />
+            </p>
             </Link>
           </div>
         </div>

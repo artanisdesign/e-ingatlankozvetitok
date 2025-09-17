@@ -208,7 +208,7 @@ export default function ContactFormRealEstate({
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex w-full items-center justify-center gap-x-3 rounded-md border border-transparent bg-teal-600 px-4 py-3 text-center text-sm font-medium text-white transition hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 focus:ring-offset-white disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-offset-gray-800 lg:text-base"
+            className="inline-flex w-full items-center justify-center gap-x-3 rounded-md border border-transparent bg-secondary px-4 py-3 text-center text-sm font-medium text-white transition hover:bg-secondary/80  focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-white disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-offset-gray-800 lg:text-base"
           >
             {loading && (
               <>

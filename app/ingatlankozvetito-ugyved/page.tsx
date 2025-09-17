@@ -2,15 +2,17 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+
 import { PageTitle } from "../components/blocks/page-title"
 import { Icons } from "../components/icons"
+import EINGLogo from "../components/icons/EINGLogo"
+import SzaLogo from "../components/icons/SzaLogo"
 import { SectionText } from "../components/section-renderer/section-text"
 import { HelpCard } from "../components/ui/help-card"
 import { getAllAuthors, getGlobals, getPageBySlug } from "../lib/api"
 import { generateSeoObject } from "../lib/generate-seo-object"
 import getHeadings from "../lib/getHeadings"
 import { getImageWithPlaceholder } from "../lib/image-with-placeholder"
-import SzaLogo from "../components/icons/SzaLogo"
 
 const slug = "ingatlankozvetito-ugyved"
 
@@ -92,35 +94,36 @@ export default async function TeamPage() {
             ügyvédeknek szóló ajánlatunkról.
           </p>
         </Link> */}
-        
       </div>
-      <div className="my-10 overflow-hidden rounded-lg">
+      {/* <div className="my-10 overflow-hidden rounded-lg">
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1FiugrTxe0Zv3bZ3Rhe5QYXrMRVLdQd0&ehbc=2E312F&noprof=1"
           width="100%"
           height="600"
           loading="lazy"
         ></iframe>
-      </div>
+      </div> */}
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <HelpCard
           title="Vevőknek"
           subtitle="Ha ingatlant venne itt találja a tudnivalókat"
-          link="/ingatlan-tudnivalok-vevoknek"
+          link="/vevoimegbizas"
           icon={<Icons.scrollText className="size-10 p-1" />}
         />
         <HelpCard
           title="Eladóknak"
           subtitle="Eladóként itt juthat hasznos tanácsokhoz"
-          link="/ingatlan-tudnivalok-eladoknak"
+          link="/ingatlankozvetites"
           icon={<Icons.landmark className="size-10 p-1" />}
         />
         <HelpCard
-          title="Ügyvédeknek"
-          subtitle="Együttműködési lehetőségek "
-          link="/szoftver-ugyvedeknek"
-          icon={<Icons.scale className="size-10 p-1" />}
+          title="Ügyvédek"
+          subtitle="e-ingatlanugyvedek.hu"
+          link="http://e-ingatlanugyvedek.hu"
+          basicLink={true}
+          newPage={true}
+          icon={<EINGLogo className="size-11 p-1" />}
         />
         <HelpCard
           title="Szerződés Asszisztens"

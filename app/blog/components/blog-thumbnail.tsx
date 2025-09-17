@@ -22,34 +22,21 @@ export function BlogThumbnailSidebar({ post }: { post?: BlogPost }) {
                 alt={cover.alternativeText ?? siteConfig.name}
                 width={400}
                 height={300}
-                className="size-full rounded-xl object-cover object-top transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="size-full rounded-xl object-cover object-top transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
             )}
           </div>
 
-          <div className="m-4 ml-6 mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-300 dark:group-hover:text-white">
+          <div className="m-4 ml-0 mt-6">
+            <h3 className="text-xl font-semibold text-gray-800 group-hover:text-teal-600 dark:text-gray-300 dark:group-hover:text-teal-500">
               {post.title}
             </h3>
             <p className="mt-3 line-clamp-3 text-gray-600 dark:text-gray-400">
               {post.description}
             </p>
-            <p className="mt-4 inline-flex items-center gap-x-1  font-medium text-teal-600 hover:text-teal-600 dark:text-teal-500 ">
+            <p className="mt-4 inline-flex items-center gap-x-1  text-sm font-medium text-teal-600 transition-all group-hover:translate-x-1 group-hover:text-secondary dark:text-teal-500">
               Tovább
-              <svg
-                className="size-2.5 transition-transform duration-300 group-hover:translate-x-1"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <Icons.arrowRight className="size-4 shrink-0 text-secondary opacity-0 transition-all ease-in-out group-hover:opacity-100 " />
             </p>
           </div>
         </div>
@@ -88,15 +75,15 @@ export function BlogThumbnailGrid({ post }: { post?: BlogPost }) {
         className="group overflow-hidden rounded-xl"
         href={"/blog/" + post.slug}
       >
-        <div className="sm:flex">
-          <div className="relative h-44 w-full shrink-0 overflow-hidden rounded-xl border bg-muted sm:w-56">
+        <div className="sm:flex ">
+          <div className="relative h-44 w-full shrink-0 overflow-hidden rounded-xl border bg-muted sm:w-56 ">
             {cover && cover.url && (
               <Image
                 src={cover.url}
                 alt={cover.alternativeText ?? siteConfig.name}
                 width={300}
                 height={200}
-                className="size-full rounded-xl object-cover object-top transition-transform duration-300 ease-in-out hover:scale-110"
+                className="size-full rounded-xl object-cover object-top transition-transform duration-300 ease-in-out group-hover:rotate-3 group-hover:scale-110"
               />
             )}
           </div>
@@ -108,22 +95,9 @@ export function BlogThumbnailGrid({ post }: { post?: BlogPost }) {
             <p className="mt-3 line-clamp-2 text-gray-600 dark:text-gray-400">
               {post.description}
             </p>
-            <p className="mt-4 inline-flex items-center gap-x-1  text-sm font-medium text-teal-600 hover:text-teal-600 dark:text-teal-500">
+            <p className="mt-4 inline-flex items-center gap-x-1  text-sm font-medium text-teal-600 transition-all group-hover:translate-x-1 group-hover:text-secondary dark:text-teal-500">
               Tovább
-              <svg
-                className="size-2.5 transition-transform duration-300 group-hover:translate-x-1"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <Icons.arrowRight className="size-4 shrink-0 text-secondary opacity-0 transition-all ease-in-out group-hover:opacity-100 " />
             </p>
           </div>
         </div>
