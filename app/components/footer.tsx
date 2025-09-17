@@ -31,7 +31,7 @@ export default function Footer({ data }: { data: FooterData }) {
               target="_blank"
               aria-label="szerzodes-asszisztens.hu"
             >
-              <SzaLogo className="absolute left-[60px] top-2 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100" />
+              <SzaLogo className="absolute left-[120px] top-0 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100" />
             </Link>
             <Link
               className=""
@@ -41,14 +41,14 @@ export default function Footer({ data }: { data: FooterData }) {
               target="_blank"
               aria-label="e-ingatlanugyvedek.hu"
             >
-              <EINGLogo className="absolute top-2 left-[120px] lg:-top-11 lg:left-8 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100 " />
+              <EINGLogo className="absolute top-0 left-[60px]  size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100 " />
             </Link>
             <Image
               src={logo}
               height={40}
               width={40}
               alt={"E-ingatlan ügyvédek"}
-              className="mb-8 mt-2 transition-transform ease-in-out hover:scale-125"
+              className="mb-8 transition-transform ease-in-out hover:scale-125"
               unoptimized
             />
             <Link
@@ -109,13 +109,13 @@ export default function Footer({ data }: { data: FooterData }) {
             .filter((item) => item.id !== "CityLinks")
             .map((nav) => (
               <div className="col-span-1" key={nav.id}>
-                <p className="mb-2 font-bold text-teal-400">{nav.title}</p>
+                <p className="mb-2 font-bold text-teal-300">{nav.title}</p>
 
                 {(data[nav.id as keyof FooterData] as LinkData[]).map(
                   (submenu) => (
                     <p key={submenu.id}>
                       <Link
-                        className="my-1.5 inline-flex gap-x-2 text-gray-400 transition-colors hover:text-secondary"
+                        className="my-1.5 inline-flex gap-x-2 text-gray-300 transition-colors hover:text-secondary"
                         href={submenu.url}
                         target={submenu.newTab ? "_blank" : undefined}
                       >
@@ -133,7 +133,7 @@ export default function Footer({ data }: { data: FooterData }) {
           .filter((item) => item.id === "CityLinks")
           .map((nav) => (
             <div className="col-span-1" key={nav.id}>
-              <p className="mb-2 font-bold text-gray-50">{nav.title}</p>
+              <p className="mb-2 font-bold text-teal-300">{nav.title}</p>
               <div
                 className="grid grid-cols-2 flex-wrap gap-1 sm:flex sm:gap-x-6 md:flex-row"
                 key={nav.id}
