@@ -26,7 +26,7 @@ function getCorsHeaders(origin: string | null): Headers {
   return headers
 }
 
-const fromEmail = "e-ingatlanközvetítők.hu weboldal <info@e-ingatlanugyvedek.hu>"
+const fromEmail = "e-ingatlanközvetítők.hu weboldal<info@e-ingatlanugyvedek.hu>"
 const toEmails = ["artanis99+eingatlan@gmail.com", "judit.szabo@igm.jogasz.hu"]
 
 const fromEmailToSender = "e-ingatlanügyvédek.hu<info@e-ingatlanugyvedek.hu>"
