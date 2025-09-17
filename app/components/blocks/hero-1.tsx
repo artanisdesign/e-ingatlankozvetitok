@@ -88,7 +88,7 @@ export default function Hero1({
                 width={400}
                 priority={true}
                 height={500}
-                className="h-auto w-full rounded-xl object-cover shadow"
+                className="h-auto w-full rounded-xl object-cover shadow-xl transition-all duration-500 hover:shadow-2xl"
               />
             </Tilt>
           </div>
@@ -100,7 +100,7 @@ export default function Hero1({
                 width={400}
                 priority={true}
                 height={300}
-                className="h-full w-full rounded-xl object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
+                className="h-full w-full rounded-xl object-cover shadow-lg transition-all duration-500 ease-in-out hover:shadow-xl"
               />
             </Tilt>
             <Tilt scale={1.05}>
@@ -110,7 +110,7 @@ export default function Hero1({
                 alt="Dr. Illés Géza"
                 width={400}
                 height={300}
-                className="h-full w-full rounded-xl object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
+                className="h-full w-full rounded-xl object-cover shadow-lg transition-all duration-500 ease-in-out  hover:shadow-xl"
               />
             </Tilt>
           </div>
