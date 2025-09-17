@@ -32,7 +32,7 @@ export default function Hero1({
         {/* Left content */}
         <div className="flex flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
           <Badge
-            className="gap-2 rounded-full border border-teal-600 bg-white/80 px-3 py-2  dark:border-white/15 dark:bg-background dark:text-white/80 mb-1"
+            className="gap-2 rounded-full border border-teal-600 bg-white/80 px-3 py-1  dark:border-white/15 dark:bg-background dark:text-white/80 mb-1"
             variant={"outline"}
           >
             Az
