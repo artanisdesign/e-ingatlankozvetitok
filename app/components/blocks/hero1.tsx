@@ -39,14 +39,15 @@ export default function Hero1({
             <EINGLogo className="size-5" />
             e-ingatlanügyvédek.hu bemutatja
           </Badge>
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl min-h-24 lg:min-h-32 flex items-center justify-center">
+          <h1 className="flex min-h-24 items-center justify-center text-4xl font-extrabold leading-tight sm:text-5xl lg:min-h-32 lg:text-6xl">
             <noscript>{title}</noscript>
             <TypingText
               text={["Ingatlanközvetítő ügyvédek", "Ügyvéd ingatlanközvetítők"]}
               typingSpeed={120}
               pauseDuration={2500}
-              showCursor={true}
+              showCursor={false}
               cursorCharacter="|"
+              cursorClassName="bg-secondary ml-1 w-1 bg-amber-500 h-9 lg:h-10"
               className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl"
               //textColors={["#3b82f6", "#8b5cf6", "#06b6d4"]}
               variableSpeed={{ min: 50, max: 150 }}
