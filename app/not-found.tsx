@@ -27,7 +27,7 @@ export default function NotFoundPage() {
             title="Főoldal"
             subtitle="Kezdje az elején ahol minden megtalálható"
             link="/"
-            icon={<Icons.home className="size-10" />}
+            icon={<Icons.home className="size-10 " />}
           />
 
           <HelpCard

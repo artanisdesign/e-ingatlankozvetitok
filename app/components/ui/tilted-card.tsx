@@ -1,19 +1,46 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface TiltProps {
   children: React.ReactNode;
-  maxTilt?: number;   // how strong the tilt is (default: 15)
-  scale?: number;     // scale factor on hover (default: 1 = no scale)
+  maxTilt?: number;
+  scale?: number;
   className?: string;
+  disableBelow?: "sm" | "md" | "lg"; // optional breakpoint
 }
 
-export function Tilt({ children, maxTilt = 15, scale = 1, className }: TiltProps) {
+export function Tilt({
+  children,
+  maxTilt = 15,
+  scale = 1,
+  className,
+  disableBelow = "md",
+}: TiltProps) {
+  const [enabled, setEnabled] = useState(true);
+
+  useEffect(() => {
+    const media =
+      disableBelow === "md"
+        ? "(min-width: 768px)"
+        : disableBelow === "lg"
+        ? "(min-width: 1024px)"
+        : "(min-width: 640px)";
+
+    const mql = window.matchMedia(media);
+
+    const update = () => setEnabled(mql.matches);
+    update();
+
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, [disableBelow]);
+
   const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0, scale: 1 });
 
   function handleMouseMove(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    if (!enabled) return;
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - left;
     const y = e.clientY - top;
@@ -25,6 +52,7 @@ export function Tilt({ children, maxTilt = 15, scale = 1, className }: TiltProps
   }
 
   function handleMouseLeave() {
+    if (!enabled) return;
     setTransform({ rotateX: 0, rotateY: 0, scale: 1 });
   }
 

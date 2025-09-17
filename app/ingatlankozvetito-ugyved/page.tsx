@@ -104,7 +104,8 @@ export default async function TeamPage() {
         ></iframe>
       </div> */}
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 justify-stretch">
+        
         <HelpCard
           title="Vevőknek"
           subtitle="Ha ingatlant venne itt találja a tudnivalókat"

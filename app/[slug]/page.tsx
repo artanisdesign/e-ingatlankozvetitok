@@ -242,7 +242,7 @@ export default async function StaticPageDetails(props: StaticPageProps) {
             )}
             {!author && <hr className="my-20"></hr>}
 
-            <div className="mt-12 grid gap-4 content-visibility-auto sm:grid-cols-2 sm:content-visibility-visible">
+            <div className="mt-12 grid gap-4 content-visibility-auto px-1 sm:px-0 sm:grid-cols-2 sm:content-visibility-visible">
               <HelpCard
                 title="Vevőknek"
                 subtitle="Ha ingatlant venne itt találja a tudnivalókat"
