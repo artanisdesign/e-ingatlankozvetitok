@@ -9,7 +9,7 @@ const URL = isProd
 const NAME = "e-ingatlanközvetítők.hu"
 
 const DESCRIPTION =
-  "Tapasztalt ingatlan ügyvédek személyre szabott jogi segítséget nyújtanak az adásvételi folyamat minden lépésében. Átlátható díjszabás, gyors és hatékony ügyintézés, technológiai innováció a vevők és eladók teljes körű támogatására."
+  "Ingatlanközvetítés ügyvédekkel: biztonságos, átlátható és gyors adásvétel 3,5%+ÁFA jutalékkal. Kérjen ajánlatot még ma!"
 
 export const siteConfig = {
   title: NAME,
