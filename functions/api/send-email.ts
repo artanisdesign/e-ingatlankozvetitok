@@ -26,7 +26,7 @@ function getCorsHeaders(origin: string | null): Headers {
   return headers
 }
 
-const fromEmail = "e-ingatlanközvetítők.hu weboldal<info@e-ingatlanugyvedek.hu>"
+const fromEmail = "e-ingatlanközvetítők.hu <info@e-ingatlanugyvedek.hu>"
 const toEmails = ["artanis99+eingatlan@gmail.com", "judit.szabo@igm.jogasz.hu"]
 
 const fromEmailToSender = "e-ingatlanügyvédek.hu<info@e-ingatlanugyvedek.hu>"
@@ -45,11 +45,11 @@ const thankyouHtml = `
 `
 
 const templateHtml = `
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--$--><div><h2>Általános kapcsolatfelvétel</h2><h2>Név: <!-- -->[[name]]</h2><h2>Email: <!-- -->[[email]]</h2><h2>Telefonszám: <!-- -->[[phone]]</h2><h2>Mikor: <!-- -->[[when]]</h2><h2>Ügytípus: [[business]]</h2><h2>Város: <!-- -->[[city]]</h2><h4>Oldal: <!-- -->[[path]]</h4></div><!--/$-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--$--><div><h2>e-ingatlanközvetítők.hu Általános kapcsolatfelvétel</h2><h2>Név: <!-- -->[[name]]</h2><h2>Email: <!-- -->[[email]]</h2><h2>Telefonszám: <!-- -->[[phone]]</h2><h2>Mikor: <!-- -->[[when]]</h2><h2>Ügytípus: [[business]]</h2><h2>Város: <!-- -->[[city]]</h2><h4>Oldal: <!-- -->[[path]]</h4></div><!--/$-->
 `
 
 const templateLawyer = `
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--$--><div><h2>Ügyvédi kapcsolatfelvétel</h2><h2>Név: <!-- -->[[name]]</h2><h2>Email: <!-- -->[[email]]</h2><h2>Telefonszám: <!-- -->[[phonenumber]]</h2><h2>Kamara/kasz: <!-- -->[[guild]]</h2></div><!--/$-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--$--><div><h2>e-ingatlanközvetítők.hu Ügyvédi kapcsolatfelvétel</h2><h2>Név: <!-- -->[[name]]</h2><h2>Email: <!-- -->[[email]]</h2><h2>Telefonszám: <!-- -->[[phonenumber]]</h2><h2>Kamara/kasz: <!-- -->[[guild]]</h2></div><!--/$-->
 `
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
