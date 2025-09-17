@@ -31,7 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: updatedAt || publishedAt,
   }))
 
-  const routes = ["", "/kapcsolat", "/blog", "/ingatlankozvetito-ugyved", "/english"].map(
+  const routes = ["", "/kapcsolat", "/blog", "/ingatlankozvetito-ugyved"].map(
     (route) => ({
       url: `${URL}${route}`,
       lastModified: new Date().toISOString(),
