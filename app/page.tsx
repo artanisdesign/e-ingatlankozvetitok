@@ -2,13 +2,14 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 
 import ContactForm from "./components/blocks/contact-form"
+import Hero1 from "./components/blocks/hero1"
 import { Hero2 } from "./components/blocks/hero-2"
 import { Hero4 } from "./components/blocks/hero-4"
 import { Hero5 } from "./components/blocks/hero-5"
+import BlogArticles from "./components/blogArticles"
 import { Icons } from "./components/icons"
 import { getGlobals } from "./lib/api"
 import SectionRenderer from "./lib/section-renderer"
-import Hero1 from "./components/blocks/hero1"
 
 export default async function IndexPage() {
   const global = await getGlobals()
@@ -20,10 +21,12 @@ export default async function IndexPage() {
 
   return (
     <>
-    <Hero1 />
+      <Hero1 />
       <Hero2 />
       <Hero4 />
+
       <Hero5 />
+      <BlogArticles />
       <SectionRenderer blocks={Blocks} />
 
       <div className="mx-auto my-32 grid max-w-7xl items-center gap-6 p-6 content-visibility-auto sm:content-visibility-visible lg:grid-cols-2 lg:gap-16 2xl:p-0">
