@@ -11,6 +11,8 @@ import { siteConfig } from "@/config/site"
 import { FooterData, LinkData } from "@/app/types/globals"
 
 import logo from "../../public/logo.svg"
+import EINGLogo from "./icons/EINGLogo"
+import SzaLogo from "./icons/SzaLogo"
 import TikTokSVG from "./icons/TikTokSVG"
 import { ThemeToggle } from "./theme-toggle"
 import { Separator } from "./ui/separator"
@@ -20,13 +22,31 @@ export default function Footer({ data }: { data: FooterData }) {
     <footer className="border-t border-t-teal-700/50 bg-teal-950 content-visibility-auto sm:content-visibility-visible">
       <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:pt-20 ">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-          <div className="col-span-full mb-6 md:mb-3 lg:col-span-1">
+          <div className="relative col-span-full mb-6 md:mb-3 lg:col-span-1">
+            <Link
+              className=""
+              href="https://szerzodes-asszisztens.hu"
+              prefetch={false}
+              target="_blank"
+              aria-label="szerzodes-asszisztens.hu"
+            >
+              <SzaLogo className="absolute left-[60px] top-2 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100" />
+            </Link>
+            <Link
+              className=""
+              href="https://e-ingatlanugyvedek.hu"
+              prefetch={false}
+              target="_blank"
+              aria-label="e-ingatlanugyvedek.hu"
+            >
+              <EINGLogo className="absolute -top-11 left-8 size-10 opacity-30 transition-all ease-in-out hover:scale-125 hover:opacity-100 " />
+            </Link>
             <Image
               src={logo}
-              height={36}
-              width={36}
+              height={40}
+              width={40}
               alt={"E-ingatlan ügyvédek"}
-              className="mb-4"
+              className="mb-8 mt-2 transition-transform ease-in-out hover:scale-125"
               unoptimized
             />
             <Link
@@ -134,7 +154,7 @@ export default function Footer({ data }: { data: FooterData }) {
           ))}
 
         <div className="mt-5 flex flex-row items-center justify-between sm:mt-12">
-          <p className="mr-6 flex flex-row flex-wrap text-sm text-gray-300 gap-2">
+          <p className="mr-6 flex flex-row flex-wrap gap-2 text-sm text-gray-300">
             Minden jog fenntartva! ©{" "}
             <span className="flex flex-wrap">
               Illés és Szabó Ügyvédi Társulás megbízásából:
