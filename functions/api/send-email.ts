@@ -6,6 +6,7 @@ interface Env {
 }
 const allowedOrigins = [
   "https://e-ingatlanugyvedek.hu",
+  "https://e-ingatlankozvetitok.hu",
   "https://szerzodes-asszisztens.hu",
   "https://dev.szerzodes-asszisztens.hu",
 ]
@@ -25,7 +26,7 @@ function getCorsHeaders(origin: string | null): Headers {
   return headers
 }
 
-const fromEmail = "e-ingatlanügyvédek.hu weboldal <info@e-ingatlanugyvedek.hu>"
+const fromEmail = "e-ingatlanközvetítők.hu weboldal <info@e-ingatlanugyvedek.hu>"
 const toEmails = ["artanis99+eingatlan@gmail.com", "judit.szabo@igm.jogasz.hu"]
 
 const fromEmailToSender = "e-ingatlanügyvédek.hu<info@e-ingatlanugyvedek.hu>"
@@ -73,7 +74,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       data = await resend.emails.send({
         from: fromEmail,
         to: toEmails,
-        subject: "Általános kapcsolatfelvétel: " + formData.name,
+        subject: "K: általános kapcsolatfelvétel: " + formData.name,
         html: templateHtml
           .replaceAll("[[name]]", formData.name)
           .replaceAll("[[email]]", formData.email)
@@ -84,7 +85,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           .replaceAll("[[path]]", formData.path),
       })
 
-      try {
+   /*   try {
         //this is prod now
         await fetch("https://sendlead-k3mizzwdpq-oa.a.run.app", {
           method: "POST",
@@ -96,14 +97,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         })
       } catch (error) {
         console.error(error)
-      }
+      }*/
     }
 
     if (formData.formid === "contact-form-real-estate") {
       data = await resend.emails.send({
         from: fromEmail,
         to: toEmails,
-        subject: "Kapcsolatfelvétel ingatlanközvetítővel: " + formData.name,
+        subject: "K: kapcsolatfelvétel ingatlanközvetítővel: " + formData.name,
         html: templateHtml
           .replaceAll("[[name]]", formData.name)
           .replaceAll("[[email]]", formData.email)
@@ -117,7 +118,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       data = await resend.emails.send({
         from: fromEmail,
         to: toEmails,
-        subject: "Hitelközvetítő kapcsolatfelvétel: " + formData.name,
+        subject: "K: Hitelközvetítő kapcsolatfelvétel: " + formData.name,
         html: templateHtml
           .replaceAll("[[name]]", formData.name)
           .replaceAll("[[email]]", formData.email)
@@ -169,7 +170,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       data = await resend.emails.send({
         from: fromEmail,
         to: toEmails,
-        subject: "Ügyvédi kapcsolatfelvétel: " + formData.name,
+        subject: "K: ügyvédi kapcsolatfelvétel: " + formData.name,
         html: templateLawyer
           .replaceAll("[[name]]", formData.name)
           .replaceAll("[[email]]", formData.email)
@@ -178,28 +179,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       })
     }
 
-    if (formData.formid === "szerzodes-asszisztens-ugyvedek") {
-      data = await resend.emails.send({
-        from: fromEmail,
-        to: toEmails,
-        subject: "Szerződés Asszisztens: " + formData.name,
-        html: templateLawyer
-          .replaceAll("[[name]]", formData.name)
-          .replaceAll("[[email]]", formData.email)
-          .replaceAll("[[phonenumber]]", formData.phonenumber)
-          .replaceAll("[[guild]]", formData.kasz),
-      })
-      return new Response(
-        JSON.stringify({
-          message: "sent",
-        }),
-        {
-          status: 200,
-          headers,
-        }
-      )
-    }
-
+/*
     try {
       data = await resend.emails.send({
         from: fromEmailToSender,
@@ -214,6 +194,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     } catch (error) {
       console.error(error)
     }
+*/
 
     return new Response(
       JSON.stringify({
