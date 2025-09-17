@@ -84,6 +84,7 @@ export default function Hero1({
               src={images[0]}
               alt="Dr. Surányi Balázs"
               width={400}
+              priority={true}
               height={500}
               className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
             />
@@ -92,15 +93,17 @@ export default function Hero1({
             <Image
               src={images[1]}
               alt="Dr. Szabó Judit Anna"
-              width={600}
-              height={400}
+              width={400}
+              priority={true}
+              height={300}
               className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
             />
             <Image
               src={images[2]}
+              priority={true}
               alt="Dr. Illés Géza"
-              width={600}
-              height={400}
+              width={400}
+              height={300}
               className="h-auto w-full rounded-lg object-cover shadow transition-all duration-500 ease-in-out hover:scale-105"
             />
           </div>
