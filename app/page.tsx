@@ -26,6 +26,7 @@ export default async function IndexPage() {
       <Hero4 />
 
       <Hero5 />
+       {/* @ts-expect-error Async Server Component */}
       <BlogArticles />
       <SectionRenderer blocks={Blocks} />
 
