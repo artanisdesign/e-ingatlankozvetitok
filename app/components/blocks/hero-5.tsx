@@ -49,12 +49,17 @@ const Hero5 = () => {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {DATA.map(({ id, title, description }, index) => (
-            <div key={id} className="rounded-lg border bg-gray-50 p-6 dark:border-teal-700 dark:bg-gray-900">
+            <div
+              key={id}
+              className="rounded-lg border bg-gray-50 p-6 transition hover:scale-105 dark:border-teal-700 dark:bg-gray-900"
+            >
               <span className="mb-3 flex flex-col items-start justify-center rounded-full text-3xl font-extrabold text-secondary">
                 {index + 1}.
               </span>
               <div className="mb-2 text-lg font-semibold">{title}</div>
-              <div className="text-sm text-gray-950 dark:text-muted-foreground">{description}</div>
+              <div className="text-sm text-gray-950 dark:text-muted-foreground">
+                {description}
+              </div>
             </div>
           ))}
         </div>
