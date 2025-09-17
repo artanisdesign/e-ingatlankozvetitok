@@ -21,7 +21,6 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const storedCookieConsent = getLocalStorage("cookie_consent", null)
-
     setCookieConsent(storedCookieConsent)
   }, [setCookieConsent])
 
@@ -40,11 +39,10 @@ export default function CookieBanner() {
     }
   }, [cookieConsent])
 
-  return showBanner ? null : (
+  return !showBanner ? null : (
     <div
       className={cn(
-        "fixed bottom-0 right-0 z-[60] mx-auto w-full p-6 sm:max-w-xl",
-        showBanner ? "" : "hidden"
+        "fixed bottom-0 right-0 z-[60] mx-auto w-full p-6 sm:max-w-xl"
       )}
     >
       <div className="rounded-xl border border-gray-200 bg-white/80 p-4 shadow-sm backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/70">

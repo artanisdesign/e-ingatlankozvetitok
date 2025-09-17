@@ -130,7 +130,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           }}
           images={[
             siteConfig.url + "/logo.svg",
-            "https://res.cloudinary.com/cc-images/image/upload/f_auto,c_limit,w_828,q_75/v1693306391/dylan_gillis_Kdeq_A3a_Tn_BY_unsplash_8b188f121d.jpg",
+            siteConfig.url + "/og_image_n.png",
           ]}
           sameAs={siteConfig.sameURLs}
           makesOffer={
@@ -163,7 +163,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           }
         />
 
-        <NextTopLoader height={2} color={"rgb(13 148 136)"} showSpinner={false} />
+        <NextTopLoader
+          height={2}
+          color={"rgb(13 148 136)"}
+          showSpinner={false}
+        />
 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <BgSvg />
