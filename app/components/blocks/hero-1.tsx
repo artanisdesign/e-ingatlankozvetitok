@@ -85,9 +85,9 @@ export default function Hero1({
               <Image
                 src={images[0]}
                 alt="Dr. Surányi Balázs"
-                width={400}
+                width={300}
                 priority={true}
-                height={500}
+                height={400}
                 className="h-auto w-full rounded-xl object-cover shadow-xl transition-all duration-500 hover:shadow-2xl"
               />
             </Tilt>

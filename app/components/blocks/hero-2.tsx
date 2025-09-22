@@ -28,8 +28,9 @@ const Hero2 = ({
                 src={
                   "https://res.cloudinary.com/cc-images/image/upload/v1758101636/Szakerto_ingatlankoezvetito_csapatunk_a_jogi_atvilagitastol_a_professzionalis_fotozason_at_a_sikeres_targyalasig_mindenben_tamogatja_Oent_hogy_az_eladas_nyereseges_legyen_cad19f5a76.jpg"
                 }
-                width={1200}
-                height={800}
+                width={800}
+                height={500}
+                priority={true}
                 alt={"Ingatlanközvetítői csapatunk"}
                 className="m-0 size-full object-cover object-center transition-all duration-500 ease-in-out hover:translate-y-1 hover:scale-105"
               />
