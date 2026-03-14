@@ -47,7 +47,7 @@ export default function Footer({ data }: { data: FooterData }) {
               src={logo}
               height={40}
               width={40}
-              alt={"E-ingatlan ügyvédek"}
+              alt={"E-ingatlan közvetítők logo"}
               className="mb-8 transition-transform ease-in-out hover:scale-125"
               unoptimized
             />

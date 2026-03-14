@@ -379,10 +379,14 @@ export async function getGlobals(
 ): Promise<GlobalAttributes> {
   const query = qs.stringify(
     {
-      pLevel: 4,
-      pagination: {
-        pageSize: limit ?? 1000,
-        page: 1,
+      populate: {
+        Footer: {
+          populate: "*",
+        },
+        NavMenu: {
+          populate: "*",
+        },
+        //Blocks: blocksToPopulate,
       },
     },
     {
