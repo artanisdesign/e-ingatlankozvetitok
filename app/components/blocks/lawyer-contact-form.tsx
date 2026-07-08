@@ -61,6 +61,11 @@ export default function LawyerContactForm() {
       })
       await res.json()
       form.reset(defaultValues)
+       // GA4 won't auto-fire form_submit here because RHF's handleSubmit
+      // calls preventDefault() on the native submit event — fire it manually.
+      ;(window as any).gtag?.("event", "form_submit", {
+        form_id: values.formid,
+      })
       toast({
         title: "Üzenet elküldve, hamarosan visszahívjuk!",
         variant: "success",

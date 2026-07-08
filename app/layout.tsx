@@ -98,7 +98,10 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang="hu" suppressHydrationWarning className="scroll-smooth">
-      <head />
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-3331703253966842">
+        </meta>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
