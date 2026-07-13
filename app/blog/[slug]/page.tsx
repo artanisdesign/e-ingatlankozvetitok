@@ -10,6 +10,7 @@ import { ReturnToBlogButton } from "@/app/blog/components/blog-button"
 import { BlogThumbnailSidebar } from "@/app/blog/components/blog-thumbnail"
 import { AuthorCard } from "@/app/components/blocks/author-card"
 import { FAQSection } from "@/app/components/blocks/faq-section"
+import { GoogleNewsCTA } from "@/app/components/blocks/google-news-cta"
 import { PageTitle } from "@/app/components/blocks/page-title"
 import TOC from "@/app/components/blocks/toc"
 import { SectionImage } from "@/app/components/section-renderer/section-image"
@@ -199,7 +200,9 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
           />
         )}
         {post && <SectionText text={content} mustRender={true} />}
-
+        <span className="flex w-full flex-col content-visibility-auto sm:content-visibility-visible lg:hidden lg:content-visibility-hidden">
+          <GoogleNewsCTA />
+        </span>
         <span className="flex w-full flex-col pb-10 content-visibility-auto sm:content-visibility-visible lg:hidden lg:content-visibility-hidden">
           <TOC headings={headings} />
         </span>
@@ -228,6 +231,7 @@ export default async function BlogDetailsPage(props: BlogPageProps) {
       </div>
 
       <div className="hidden content-visibility-hidden lg:col-span-1 lg:block lg:content-visibility-visible">
+        <GoogleNewsCTA />
         <TOC headings={headings} />
         <p className="mb-5  pt-6 text-xl font-semibold text-gray-800 dark:text-gray-300">
           Legutóbbi bejegyzések

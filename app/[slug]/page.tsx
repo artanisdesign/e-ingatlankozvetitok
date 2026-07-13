@@ -19,6 +19,7 @@ import { ReturnToBlogButton } from "../blog/components/blog-button"
 import { BlogThumbnailSidebar } from "../blog/components/blog-thumbnail"
 import { AuthorCard } from "../components/blocks/author-card"
 import { FAQSection } from "../components/blocks/faq-section"
+import { GoogleNewsCTA } from "../components/blocks/google-news-cta"
 import { PageTitle } from "../components/blocks/page-title"
 import TOC from "../components/blocks/toc"
 import { ClientRun } from "../components/client-run"
@@ -201,7 +202,9 @@ export default async function StaticPageDetails(props: StaticPageProps) {
                 {/* <div className="lg:hidden">
                   <MobileBanner />
                 </div>*/}
-
+                <span className="flex w-full flex-col content-visibility-auto sm:content-visibility-visible lg:hidden lg:content-visibility-hidden">
+                  <GoogleNewsCTA />
+                </span>
                 <span className="flex w-full flex-col pb-10 lg:hidden">
                   <TOC headings={headings} />
                 </span>
@@ -290,7 +293,12 @@ export default async function StaticPageDetails(props: StaticPageProps) {
         )}
 
         <div className="hidden space-y-4 content-visibility-hidden  lg:col-span-4 lg:block lg:content-visibility-visible">
-          {!isSummaryPage && <TOC headings={headings} />}
+          {!isSummaryPage && (
+            <>
+              <GoogleNewsCTA />
+              <TOC headings={headings} />
+            </>
+          )}
 
           <p className="mb-5 pt-6 text-xl font-semibold text-gray-800 dark:text-gray-300">
             Legutóbbi bejegyzések
