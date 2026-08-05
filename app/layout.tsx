@@ -17,7 +17,6 @@ import { cn } from "@/app/lib/utils"
 
 import AdSenseLoader from "./components/AdsenseLoader"
 import GoogleAnalytics from "./components/GoogleAnalytics"
-import CookieBanner from "./components/cookie-banner"
 import { Icons } from "./components/icons"
 import BgSvg from "./components/ui/bg-svg"
 
@@ -199,7 +198,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
           <TailwindIndicator />
           <Toaster />
-          <CookieBanner />
         </ThemeProvider>
         {
           // Google Analytics
