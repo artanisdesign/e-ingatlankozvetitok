@@ -12,7 +12,7 @@ export default function GoogleAnalytics({
   useEffect(() => {
     //setTimeout(loadGA, 2000)
 
-    function loadGA() {
+    /*function loadGA() {
       const script1 = document.createElement("script")
       script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
       script1.async = true
@@ -34,9 +34,9 @@ export default function GoogleAnalytics({
       gtag('config', '${GA_MEASUREMENT_ID}');
     `
       document.head.appendChild(script2)
-    }
+    }*/
     const onFirstInteraction = () => {
-      loadGA()
+      //loadGA()
       window.removeEventListener("scroll", onFirstInteraction)
       window.removeEventListener("mousemove", onFirstInteraction)
       window.removeEventListener("keydown", onFirstInteraction)

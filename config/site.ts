@@ -22,6 +22,7 @@ export const siteConfig = {
     "https://e-ingatlanközvetítők.hu",
   ],
   GA_MEASUREMENT_ID: "GTM-TXL83LMH",
+  ADSENSE_CLIENT: "ca-pub-3331703253966842",
   footerNav: [
     {
       title: "Rólunk",

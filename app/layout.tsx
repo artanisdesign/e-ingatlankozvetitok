@@ -1,6 +1,7 @@
 /* eslint-disable tailwindcss/enforces-negative-arbitrary-values */
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import Script from "next/script"
 import { LocalBusinessJsonLd, LogoJsonLd } from "next-seo"
 import NextTopLoader from "nextjs-toploader"
 
@@ -14,6 +15,7 @@ import { getGlobals } from "@/app/lib/api"
 import { fontSans } from "@/app/lib/fonts"
 import { cn } from "@/app/lib/utils"
 
+import AdSenseLoader from "./components/AdsenseLoader"
 import GoogleAnalytics from "./components/GoogleAnalytics"
 import CookieBanner from "./components/cookie-banner"
 import { Icons } from "./components/icons"
@@ -99,8 +101,23 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="hu" suppressHydrationWarning className="scroll-smooth">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-3331703253966842">
-        </meta>
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
+          `}
+        </Script>
+        <meta
+          name="google-adsense-account"
+          content={siteConfig.ADSENSE_CLIENT}
+        />
       </head>
       <body
         className={cn(
@@ -190,6 +207,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <GoogleAnalytics GA_MEASUREMENT_ID={siteConfig.GA_MEASUREMENT_ID} />
           )
         }
+        <AdSenseLoader />
       </body>
     </html>
   )
