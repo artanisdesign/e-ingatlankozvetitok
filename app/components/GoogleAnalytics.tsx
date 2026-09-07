@@ -35,8 +35,27 @@ export default function GoogleAnalytics({
     `
       document.head.appendChild(script2)
     }*/
+    function loadOaiq() {
+      if ((window as any).oaiq) return
+      const q: any = function (...args: unknown[]) {
+        q.q.push(args)
+      }
+      q.q = []
+      ;(window as any).oaiq = q
+      const script = document.createElement("script")
+      script.async = true
+      script.src = "https://bzrcdn.openai.com/sdk/oaiq.min.js"
+      const firstScript = document.getElementsByTagName("script")[0]
+      firstScript.parentNode?.insertBefore(script, firstScript)
+
+      q("init", {
+        pixelId: "BkiSWHS7JjTGEckZXAcPUb",
+      })
+    }
+
     const onFirstInteraction = () => {
       //loadGA()
+      setTimeout(loadOaiq, 2000)
       window.removeEventListener("scroll", onFirstInteraction)
       window.removeEventListener("mousemove", onFirstInteraction)
       window.removeEventListener("keydown", onFirstInteraction)
