@@ -12,7 +12,7 @@ export default function GoogleAnalytics({
   useEffect(() => {
     //setTimeout(loadGA, 2000)
 
-    /*function loadGA() {
+    function loadGA() {
       const script1 = document.createElement("script")
       script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
       script1.async = true
@@ -27,14 +27,14 @@ export default function GoogleAnalytics({
       gtag('consent', 'default', {
           'analytics_storage': 'granted',
           'ad_storage' : 'granted',
-          'ad_user_data': 'denied',
+          'ad_user_data': 'granted',
           'ad_personalization': 'denied',
       });
 
       gtag('config', '${GA_MEASUREMENT_ID}');
     `
       document.head.appendChild(script2)
-    }*/
+    }
     function loadOaiq() {
       if ((window as any).oaiq) return
       const q: any = function (...args: unknown[]) {
@@ -54,7 +54,7 @@ export default function GoogleAnalytics({
     }
 
     const onFirstInteraction = () => {
-      //loadGA()
+      loadGA()
       setTimeout(loadOaiq, 2000)
       window.removeEventListener("scroll", onFirstInteraction)
       window.removeEventListener("mousemove", onFirstInteraction)

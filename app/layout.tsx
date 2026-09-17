@@ -14,8 +14,6 @@ import { Toaster } from "@/app/components/ui/toaster"
 import { getGlobals } from "@/app/lib/api"
 import { fontSans } from "@/app/lib/fonts"
 import { cn } from "@/app/lib/utils"
-
-import AdSenseLoader from "./components/AdsenseLoader"
 import GoogleAnalytics from "./components/GoogleAnalytics"
 import { Icons } from "./components/icons"
 import BgSvg from "./components/ui/bg-svg"
@@ -100,7 +98,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="hu" suppressHydrationWarning className="scroll-smooth">
       <head>
-        <Script id="consent-default" strategy="beforeInteractive">
+        {
+          /*  <Script id="consent-default" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -112,7 +111,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               'wait_for_update': 500
             });
           `}
-        </Script>
+        </Script>*/
+        }
+       
         <meta
           name="google-adsense-account"
           content={siteConfig.ADSENSE_CLIENT}
@@ -205,7 +206,10 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             <GoogleAnalytics GA_MEASUREMENT_ID={siteConfig.GA_MEASUREMENT_ID} />
           )
         }
-        <AdSenseLoader />
+        {
+          /*  <AdSenseLoader />*/
+        }
+       
       </body>
     </html>
   )
