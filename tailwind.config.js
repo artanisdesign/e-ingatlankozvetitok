@@ -59,7 +59,7 @@ module.exports = {
   		},
   		fontFamily: {
   			sans: [
-  				'Inter var',
+  				//'Inter var',
                     ...fontFamily.sans
                 ]
   		},

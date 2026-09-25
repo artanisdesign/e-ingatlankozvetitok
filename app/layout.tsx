@@ -12,7 +12,7 @@ import { TailwindIndicator } from "@/app/components/tailwind-indicator"
 import { ThemeProvider } from "@/app/components/theme-provider"
 import { Toaster } from "@/app/components/ui/toaster"
 import { getGlobals } from "@/app/lib/api"
-import { fontSans } from "@/app/lib/fonts"
+//import { fontSans } from "@/app/lib/fonts"
 import { cn } from "@/app/lib/utils"
 import GoogleAnalytics from "./components/GoogleAnalytics"
 import { Icons } from "./components/icons"
@@ -122,7 +122,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          //fontSans.variable
         )}
       >
         <LogoJsonLd
