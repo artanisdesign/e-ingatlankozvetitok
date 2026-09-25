@@ -45,9 +45,7 @@ export async function getPageSlugs(): Promise<BlogPagePropsStatic["params"][]> {
 export async function getDocumentAssistantData(): Promise<StaticPage | null> {
   const populateObject = {
     seo: { populate: "*" },
-    cover: {
-      populate: true,
-    },
+    cover: true,
     blocks: {
       populate: "*",
     },
@@ -80,9 +78,7 @@ export async function getPageBySlug(
 ): Promise<StaticPage | null> {
   const populateObject = {
     seo: { populate: "*" },
-    cover: {
-      populate: true,
-    },
+    cover: true,
     blocks: {
       populate: "*",
     },
@@ -227,9 +223,7 @@ export async function getAllPosts(
 ): Promise<BlogPost[]> {
   const populateObject = {
     seo: { populate: "*" },
-    cover: {
-      populate: true,
-    },
+    cover: true,
     blocks: {
       populate: "*",
     },
@@ -276,9 +270,7 @@ export async function getAllPosts(
 export async function getFeaturedPost(limit: number = 1): Promise<BlogPost[]> {
   const populateObject = {
     seo: { populate: "*" },
-    cover: {
-      populate: true,
-    },
+    cover: true,
     author: {
       populate: "avatar",
     },
@@ -314,9 +306,7 @@ export async function getAllEnglishPosts(
   limit: number = 1000
 ): Promise<BlogPost[]> {
   const populateObject = {
-    cover: {
-      populate: true,
-    },
+    cover: true,
     seo: { populate: "*" },
     blocks: {
       populate: "*",
